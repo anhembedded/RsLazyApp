@@ -1,7 +1,6 @@
-from typing import override
-from utility.log import Logger_T, logging
-from views.view_abstract import ViewAbstract_T
-
+import sys
+import time
+import random
 from threading import Thread
 
 from PySide6.QtWidgets import (
@@ -16,18 +15,61 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import QObject, Signal, Slot
 
 
+# --- Worker Thread Class ---
+class Worker(QObject):
+    """
+    Performs a long-running task in a separate thread.
 
-class viewPySide_T(ViewAbstract_T, QMainWindow):  # Inherit from QMainWindow
+    Communicates with the main thread via signals and slots.
+    """
+
+    finished = Signal()  # Signal emitted when the task is complete
+    progress = Signal(int)  # Signal emitted to update progress (int percentage)
+    result = Signal(str)  # Signal emitted to send a result string
+    error = Signal(str)    # Signal to indicate an error.
+
     def __init__(self):
-        ViewAbstract_T.__init__(self)
-        QMainWindow.__init__(self)  # Call QMainWindow's __init__
-        self.__log = Logger_T()
-        self.__log.log(message="Initializing [viewPySide]", level=logging.INFO)
-        self.createWidgets()
+        super().__init__()
+        self._running = True  # Flag to control the worker's execution
 
-    @override
-    def createWidgets(self):
+    @Slot()
+    def run(self):
+        """
+        The main work of the thread.  This runs in the worker thread.
+        """
+        try:
+            for i in range(101):
+                if not self._running:  # Check if we should stop
+                    break
+                time.sleep(0.05)  # Simulate work (e.g., network request, file I/O)
+                self.progress.emit(i)  # Emit progress signal
+
+                if random.random() < 0.05:  # Simulate occasional error (5% chance)
+                    raise RuntimeError("Simulated an error!")
+
+            self.result.emit("Task completed successfully!")  # Emit result signal
+
+        except Exception as e:
+            self.error.emit(str(e)) # Emit error if one occurs
+
+        finally:
+            self.finished.emit()  # Always emit finished signal
+
+
+    def stop(self):
+        """
+        Stops the worker thread gracefully.
+        """
+        self._running = False
+
+
+# --- Main Window Class ---
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
         self.setWindowTitle("PySide6 Threading Example")
+
         # UI elements
         self.progress_bar = QProgressBar()
         self.progress_bar.setRange(0, 100)
@@ -114,10 +156,10 @@ class viewPySide_T(ViewAbstract_T, QMainWindow):  # Inherit from QMainWindow
         self.start_button.setEnabled(True)  # Re-enable start button on error
         self.stop_button.setEnabled(False)
 
-    def on_button_clicked(self):
-        self.__log.log(message="Button clicked", level=logging.INFO)
 
-    @override
-    def run(self):
-        self.__log.log(message="Running [viewPySide_T]", level=logging.INFO)
-        self.show()
+# --- Main Application ---
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec())
