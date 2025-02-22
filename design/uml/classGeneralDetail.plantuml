@@ -35,8 +35,8 @@ package "ViewModels" {
     abstract viewModel_abstract_T{
         - model : model_abstract_T
         + widgetSignals_Callback(...)
-        + requestTaskProcessing()
-        + updateUI()
+        + requestTaskProcessing(message: MessageObject)
+        + updateUI(message: MessageObject)
     }
     class viewModel_T
     viewModel_T --|> viewModel_abstract_T
@@ -47,6 +47,7 @@ package "Models" {
       + enqueueTask(task: Task)
       + processResult(result: ResultObject)
       + processError(error: ErrorObject)
+      + processMessage(message: MessageObject)
     }
     class model_T
     model_T --|> model_abstract_T
@@ -66,23 +67,33 @@ package "Threading" {
 
   }
   class ResultObject {
-    
+
   }
   class ErrorObject {
-  
+
+  }
+  class MessageObject {
+
   }
   class TaskQueue << (T,#FF7700) >> {
     + enqueue(task: Task)
     + dequeue(): Task
   }
-  class WorkerThread { 
+  class MessageQueue << (T,#FF7700) >> {
+    + enqueue(message: MessageObject)
+    + dequeue(): MessageObject
+  }
+  class WorkerThread {
     - taskQueue: TaskQueue
+    - messageQueue: MessageQueue
     - model: model_abstract_T
     + run()
-    + processTasks() 
+    + processMessages()
+    + processTasks()
   }
   WorkerThread --* model_abstract_T : has a
   WorkerThread --* TaskQueue : uses
+  WorkerThread --* MessageQueue : uses
 }
 
 

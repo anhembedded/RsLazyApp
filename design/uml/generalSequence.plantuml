@@ -46,8 +46,8 @@ loop While task available
 end
 deactivate CS
 
-MP -> VM: Send MessageObject to ViewModel
 MP -> MP: Processes MessageObject
+MP -> VM: Send MessageObject to ViewModel
 deactivate MP
 activate VM
 VM -> VM: Processes MessageObject
