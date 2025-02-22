@@ -1,4 +1,4 @@
-@startuml MVVM_Model_Producer_Combined_No_Cancellation_Queue
+@startuml
 title **MVVM with Producer-Consumer (Model and Producer Combined, No Cancellation)**
 
 actor "User" as U
@@ -8,22 +8,30 @@ box "Main Thread (UI Thread)" #LightBlue
     participant "**ViewModel**" as VM
 end box
 
-box "Worker Thread 1 (Consumer)" #LightGreen
+box "Sub Thread (Consumer)" #LightGreen
     participant "**Consumer**" as CS
 end box
 
-box "Worker Thread 2 (Model/Producer)" #LightCoral
+box "Sub Thread (Model/Producer)" #LightCoral
+    queue "**Message Queue**\n(Thread-Safe)" as MQ <<synchronized>>
     participant "**Model (Logic & Producer)**" as MP
     queue "**Task Queue**\n(Thread-Safe)" as TQ <<synchronized>>
 end box
 
 ' --- User Interaction & Task Creation ---
 U -> V: User interacts with UI
+activate V
 V -> VM: Sends user action (e.g., command)
-VM -> MP: Asynchronously requests task processing
+activate VM
+VM -> MQ: MessageObject is sent to Model
+deactivate VM
+activate MP
+MP -> MQ: MessageObject get messageObj from queue
+MP -> MP: Processes messageObj
+
 note right of MP: Model/Producer prepares the task and adds it to the queue.
 
-MP -> TQ: Pushes task to queue
+MP -> TQ: Pushes taskObj to queue
 
 ' --- Task Consumption & Processing ---
 CS -> TQ: Fetches task from queue (blocks until available)
@@ -31,18 +39,20 @@ activate CS
 loop While task available
     CS -> CS: Processes task
     alt on error during processing
-        CS -> MP: Sends ErrorObject to Model (with exception details)
-        MP -> VM: Notifies of error (on UI thread)
-        VM -> V: Displays error to user <<UI Thread>>
+        CS -> MP: Sends ResultObject with error to Model
     else successful processing
-        CS -> MP: Sends ResultObject to Model
+        CS -> MP: Sends ResultObject with success to Model
     end
 end
-
-' --- Model Processing & UI Update ---
-MP -> VM: Processes result & updates ViewModel (on UI thread)
-note right of VM: ViewModel uses Dispatcher/SynchronizationContext\nto update UI-bound properties.
-VM -> V: Notifies UI to refresh <<UI Thread>>
 deactivate CS
+
+MP -> VM: Send MessageObject to ViewModel
+MP -> MP: Processes MessageObject
+deactivate MP
+activate VM
+VM -> VM: Processes MessageObject
+VM -> V: Notifies UI, by DataBinding
+deactivate VM
+deactivate V
 
 @enduml

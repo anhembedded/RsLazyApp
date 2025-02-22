@@ -15,9 +15,5 @@ class view_abstract_T:
             self.__log.log(message="ViewModel allready set", level=logging.ERROR)
 
     @abstractmethod
-    def createWidgets(self):
-        pass
-
-    @abstractmethod
     def run(self):
         pass

@@ -1,0 +1,108 @@
+@startuml
+title **MVVM Class Diagram (Detailed - Python/PySide6)**
+
+left to right direction
+
+class User {
+}
+
+package "Views" {
+    abstract view_abstract_T {
+        - viewModel : viewModel_abstract_T
+        + run()
+        + addViewModel(viewModel : viewModel_abstract_T)
+        + updateUserInteraction()
+    }
+
+    package "viewPySide6" {
+        class viewPySide6_T {
+            +createWidget()
+            +connectSignals2Slots()
+        }
+        class mainWindow_T
+    }
+
+    package "viewConsole" {
+        class viewConsole_T
+    }
+
+    viewPySide6_T --|> view_abstract_T
+    viewConsole_T --|> view_abstract_T
+    mainWindow_T --* viewPySide6_T : has a
+}
+
+package "ViewModels" {
+    abstract viewModel_abstract_T{
+        - model : model_abstract_T
+        + widgetSignals_Callback(...)
+        + requestTaskProcessing()
+        + updateUI()
+    }
+    class viewModel_T
+    viewModel_T --|> viewModel_abstract_T
+}
+
+package "Models" {
+    abstract model_abstract_T {
+      + enqueueTask(task: Task)
+      + processResult(result: ResultObject)
+      + processError(error: ErrorObject)
+    }
+    class model_T
+    model_T --|> model_abstract_T
+}
+
+package "Application" {
+    class lazyApp_T
+    class main
+    lazyApp_T *-- view_abstract_T
+    lazyApp_T *-- viewModel_abstract_T
+    lazyApp_T *-- model_abstract_T
+    main o-- lazyApp_T
+}
+
+package "Threading" {
+  class Task {
+
+  }
+  class ResultObject {
+    
+  }
+  class ErrorObject {
+  
+  }
+  class TaskQueue << (T,#FF7700) >> {
+    + enqueue(task: Task)
+    + dequeue(): Task
+  }
+  class WorkerThread { 
+    - taskQueue: TaskQueue
+    - model: model_abstract_T
+    + run()
+    + processTasks() 
+  }
+  WorkerThread --* model_abstract_T : has a
+  WorkerThread --* TaskQueue : uses
+}
+
+
+
+User -- view_abstract_T : interacts with
+view_abstract_T -- viewModel_abstract_T : binds to, emits signals
+viewModel_abstract_T *-- model_abstract_T : has a
+
+skinparam class {
+    BackgroundColor White
+    BorderColor Black
+}
+skinparam abstract{
+    BackgroundColor LightGray
+    BorderColor Black
+    FontStyle italic
+}
+skinparam queue {
+  BackGroundColor lightyellow
+  BorderColor orange
+}
+
+@enduml
