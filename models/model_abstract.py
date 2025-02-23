@@ -1,18 +1,17 @@
 from PySide6.QtCore import QObject, Signal, Slot
 from utility.log import Logger_T, logging
-from viewModels.viewModel_abstract import viewModel_abstract_T  # Assuming this exists
 import time  # Import the time module
 
 
 class model_abstract_T(QObject):
     taskCompleted = Signal()
     taskCompletedError = Signal(int)
+    taskResult = Signal(str)
 
-    def __init__(self, viewModel: viewModel_abstract_T):
+    def __init__(self):
         super().__init__()
         self.__log = Logger_T()
         self.__log.log(message="Initializing [model_abstract_T]", level=logging.INFO)
-        self.viewModel: viewModel_abstract_T = viewModel
         self.__counter = 0
 
     def task_buttonClicked(self):
@@ -24,3 +23,4 @@ class model_abstract_T(QObject):
         print("Task completed")
         self.taskCompleted.emit()
         self.taskCompletedError.emit(self.__counter)
+        self.taskResult.emit("Result: " + str(self.__counter))

@@ -16,9 +16,6 @@ class lazyAppUI_T:
 
         self.app = None  # Initialize to None
         self.__view: view_abstract_T = None
-        self.__viewModel: viewModel_abstract_T = None
-        self.__model : model_abstract_T = None
-        self.__modelThread : QThread = QThread()
 
     def run(self):
         self.__log.log(message="Running [lazyAppUI_T]", level=logging.DEBUG)
@@ -26,12 +23,10 @@ class lazyAppUI_T:
 
     def __uiTask(self):
         self.__log.log(message="Running [UI task]", level=logging.DEBUG)
-        self.__viewModel = viewModel_T()
-        self.__view = viewPySide_T(self.__viewModel)
-        self.__model = model_T( self.__viewModel)
-        self.__model.moveToThread(self.__modelThread)
-        self.__modelThread.start()
+        self.app = QApplication(sys.argv)
+        self.__view = viewPySide_T()
         self.__view.run()
+        sys.exit(self.app.exec())
 
 if __name__ == "__main__":
     appUI = lazyAppUI_T()

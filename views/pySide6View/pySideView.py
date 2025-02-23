@@ -10,15 +10,14 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QWidget,
     QLabel,
-    QApplication,
     QLineEdit
 )
 from PySide6.QtCore import QObject, Signal, Slot
 
 
 class viewPySide_T(view_abstract_T):
-    def __init__(self , viewModel : viewModel_abstract_T = None):
-        super().__init__(viewModel)
+    def __init__(self):
+        super().__init__()
         self.__log = Logger_T()
         self.__log.log(message="Initializing [viewPySide]", level=logging.INFO)
 
@@ -39,16 +38,18 @@ class viewPySide_T(view_abstract_T):
         central_widget = QWidget()
         central_widget.setLayout(layout)
         self.mainWindow.setCentralWidget(central_widget)  # Corrected line!
+        self.button.clicked.connect(self.buttonClicked)
+        self.viewModel.taskResult.connect(self.updateVariableText)
 
-
-        self.button.clicked.connect(self.viewModel.example_button_clicked_callback)
-        self.variableText.setText(self.viewModel.variable)
-
+    @Slot()
+    def buttonClicked(self):
+        self.viewModel.buttonClicked.emit()
+    @Slot(str)
+    def updateVariableText(self, text):
+        self.variableText.setText(text)
 
     @override
     def run(self):
         self.__log.log(message="Running [viewPySide_T]", level=logging.INFO)
-        app = QApplication(sys.argv)
         self.createWidgets()
         self.mainWindow.show()
-        sys.exit(app.exec())
