@@ -20,7 +20,7 @@ from PySide6.QtWidgets import (QApplication, QHBoxLayout, QMainWindow, QMenu,
     QMenuBar, QSizePolicy, QStatusBar, QTabWidget,
     QWidget)
 
-class Ui_MainWindow(object):
+class Ui_MainWindow_autoGen_T(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -85,16 +85,16 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.actionChangeVin.setText(QCoreApplication.translate("MainWindow", u"ChangeVin", None))
-        self.actionSetFlag.setText(QCoreApplication.translate("MainWindow", u"SetFlag", None))
-        self.actionTheme.setText(QCoreApplication.translate("MainWindow", u"Theme", None))
-        self.actionAnhTh49.setText(QCoreApplication.translate("MainWindow", u"AnhTh49", None))
-        self.AppTab.setTabText(self.AppTab.indexOf(self.DHC_Tab), QCoreApplication.translate("MainWindow", u"DHC", None))
-        self.AppTab.setTabText(self.AppTab.indexOf(self.VLS_Tab), QCoreApplication.translate("MainWindow", u"VLS", None))
-        self.AppTab.setTabText(self.AppTab.indexOf(self.MQTT_Tab), QCoreApplication.translate("MainWindow", u"MQTT", None))
-        self.menuLazyApp.setTitle(QCoreApplication.translate("MainWindow", u"LazyApp", None))
-        self.menuEdit.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
-        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"MainWindow", None))
+        self.actionChangeVin.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"ChangeVin", None))
+        self.actionSetFlag.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"SetFlag", None))
+        self.actionTheme.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Theme", None))
+        self.actionAnhTh49.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"AnhTh49", None))
+        self.AppTab.setTabText(self.AppTab.indexOf(self.DHC_Tab), QCoreApplication.translate("MainWindow_autoGen_T", u"DHC", None))
+        self.AppTab.setTabText(self.AppTab.indexOf(self.VLS_Tab), QCoreApplication.translate("MainWindow_autoGen_T", u"VLS", None))
+        self.AppTab.setTabText(self.AppTab.indexOf(self.MQTT_Tab), QCoreApplication.translate("MainWindow_autoGen_T", u"MQTT", None))
+        self.menuLazyApp.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"LazyApp", None))
+        self.menuEdit.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Edit", None))
+        self.menuHelp.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Help", None))
     # retranslateUi
 

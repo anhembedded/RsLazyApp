@@ -1,4 +1,4 @@
-from views.pySide6View.mainWindow.autoGen_mainWindow import Ui_MainWindow
+from views.pySide6View.mainWindow.AutoGen_mainWindow import Ui_MainWindow
 from PySide6.QtWidgets import QWidget, QMainWindow
 
 class mainWindow_T(QMainWindow,Ui_MainWindow):

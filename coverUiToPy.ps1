@@ -3,6 +3,6 @@ Get-ChildItem -Recurse -Filter "*.ui" | ForEach-Object {
     $DirName = $_.Directory
     Write-Host  $_.FullName
     Remove-Item "$DirName/AutoGen_$BaseName.py"
-    pyside6-uic.exe $_.FullName -o "$DirName/AutoGen_$BaseName.py" -g python
+    pyside6-uic.exe $_.FullName -o "$DirName/AutoGen_$BaseName.py" -g python --postfix "_autoGen_T"
 }
 
