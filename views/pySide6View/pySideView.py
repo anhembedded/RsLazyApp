@@ -2,6 +2,7 @@ from typing import override
 import sys
 from utility.log import Logger_T, logging
 from views.view_abstract import view_abstract_T
+from viewModels.viewModel_abstract import viewModel_abstract_T
 
 from PySide6.QtWidgets import (
     QMainWindow,
@@ -14,10 +15,9 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import QObject, Signal, Slot
 
 
-class viewPySide_T(view_abstract_T, QObject):
-    def __init__(self):
-        view_abstract_T.__init__(self)
-        QObject.__init__(self)
+class viewPySide_T(view_abstract_T):
+    def __init__(self , viewModel : viewModel_abstract_T = None):
+        super().__init__(viewModel)
         self.__log = Logger_T()
         self.__log.log(message="Initializing [viewPySide]", level=logging.INFO)
 

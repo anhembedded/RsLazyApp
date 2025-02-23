@@ -170,3 +170,5 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 *.csv
+LazyApp_Log.csv
+log/LazyApp_Log.csv

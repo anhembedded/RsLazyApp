@@ -27,13 +27,11 @@ class lazyAppUI_T:
     def __uiTask(self):
         self.__log.log(message="Running [UI task]", level=logging.DEBUG)
         self.__viewModel = viewModel_T()
-        self.__view = viewPySide_T()
+        self.__view = viewPySide_T(self.__viewModel)
         self.__model = model_T( self.__viewModel)
-        self.__view.addViewModel(self.__viewModel)
         self.__model.moveToThread(self.__modelThread)
         self.__modelThread.start()
         self.__view.run()
-
 
 if __name__ == "__main__":
     appUI = lazyAppUI_T()
