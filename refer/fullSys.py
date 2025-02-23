@@ -1,7 +1,6 @@
 import sys
 import time
 from queue import Queue
-from threading import Thread
 
 from PySide6.QtCore import QObject, Signal, Slot, QThread, QTimer
 from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton,
