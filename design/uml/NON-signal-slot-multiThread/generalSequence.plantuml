@@ -1,0 +1,58 @@
+@startuml
+title **MVVM with Producer-Consumer (Model and Producer Combined, not use signal and slot in multiThread support by Qt framework)**
+
+actor "User" as U
+
+box "Main Thread (UI Thread)" #LightBlue
+    participant "**View (UI)**" as V
+    participant "**ViewModel**" as VM
+end box
+
+box "Sub Thread (Consumer)" #LightGreen
+    participant "**Consumer**" as CS
+end box
+
+box "Sub Thread (Model/Producer)" #LightCoral
+    queue "**Message Queue**\n(Thread-Safe)" as MQ <<synchronized>>
+    participant "**Model (Logic & Producer)**" as MP
+    queue "**Task Queue**\n(Thread-Safe)" as TQ <<synchronized>>
+end box
+
+' --- User Interaction & Task Creation ---
+U -> V: User interacts with UI
+activate V
+V -> VM: Sends user action (e.g., command)
+activate VM
+VM -> MQ: MessageObject is sent to Model
+deactivate VM
+activate MP
+MP -> MQ: MessageObject get messageObj from queue
+MP -> MP: Processes messageObj
+
+note right of MP: Model/Producer prepares the task and adds it to the queue.
+
+MP -> TQ: Pushes taskObj to queue
+
+' --- Task Consumption & Processing ---
+CS -> TQ: Fetches task from queue (blocks until available)
+activate CS
+loop While task available
+    CS -> CS: Processes task
+    alt on error during processing
+        CS -> MP: Sends ResultObject with error to Model
+    else successful processing
+        CS -> MP: Sends ResultObject with success to Model
+    end
+end
+deactivate CS
+
+MP -> MP: Processes MessageObject
+MP -> VM: Send MessageObject to ViewModel
+deactivate MP
+activate VM
+VM -> VM: Processes MessageObject
+VM -> V: Notifies UI, by DataBinding
+deactivate VM
+deactivate V
+
+@enduml

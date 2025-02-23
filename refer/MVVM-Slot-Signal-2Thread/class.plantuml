@@ -1,0 +1,86 @@
+@startuml
+title PySide6 MVVM Class Diagram (Threaded Model - Direct)
+
+left to right direction
+
+skinparam class {
+    BackgroundColor White
+    BorderColor Black
+}
+skinparam abstract{
+    BackgroundColor LightGray
+    BorderColor Black
+    FontStyle italic
+}
+
+class User {
+}
+
+package "Application" {
+    class lazyApp_T
+    class main
+    lazyApp_T *-- view_abstract_T
+    lazyApp_T *-- viewModel_abstract_T
+    lazyApp_T *-- model_abstract_T
+    main o-- lazyApp_T
+}
+
+package "Views" {
+    abstract view_abstract_T {
+        - viewModel: viewModel_abstract_T
+        + run()
+        + addViewModel(viewModel: viewModel_abstract_T)
+        + updateUserInteraction()
+        + updateUI(data) <<signal>>
+    }
+
+    package "viewPySide6" {
+        class viewPySide6_T {
+            + createWidget()
+            + connectSignals2Slots()
+            + buttonClicked() <<slot>>
+        }
+        class mainWindow_T
+    }
+
+    package "viewConsole" {
+        class viewConsole_T
+    }
+
+    viewPySide6_T --|> view_abstract_T
+    viewConsole_T --|> view_abstract_T
+    mainWindow_T --* viewPySide6_T: has a
+}
+
+package "ViewModels" {
+    abstract viewModel_abstract_T{
+        - model: model_abstract_T
+        + widgetSignals_Callback(...) <<slot>>
+        + requestTaskProcessing(message: MessageObject)
+        + dataProcessed(result: ResultObject) <<slot>>
+    }
+    class viewModel_T
+    viewModel_T --|> viewModel_abstract_T
+}
+
+package "Models" {
+    abstract model_abstract_T {
+        + processData(message: MessageObject)
+        + taskFinished(result: ResultObject) <<signal>>
+    }
+    class model_T
+    model_T --|> model_abstract_T
+}
+
+package messageObj{
+    class ResultObject {
+    }
+    class MessageObject {
+    }
+}
+
+User -- view_abstract_T: interacts with
+view_abstract_T -- viewModel_abstract_T: binds to, emits signals
+viewModel_abstract_T *-- model_abstract_T: has a
+
+@enduml

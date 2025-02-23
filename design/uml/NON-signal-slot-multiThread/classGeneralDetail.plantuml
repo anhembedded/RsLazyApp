@@ -1,0 +1,108 @@
+@startuml
+title **MVVM Class Diagram (Detailed - Python/PySide6)**
+
+left to right direction
+
+skinparam class {
+    BackgroundColor White
+    BorderColor Black
+}
+skinparam abstract{
+    BackgroundColor LightGray
+    BorderColor Black
+    FontStyle italic
+}
+skinparam queue {
+    BackGroundColor lightyellow
+    BorderColor orange
+}
+
+class User {
+}
+
+package "Application" {
+    class lazyApp_T
+    class main
+    lazyApp_T *-- view_abstract_T
+    lazyApp_T *-- viewModel_abstract_T
+    lazyApp_T *-- model_abstract_T
+    main o-- lazyApp_T
+}
+
+package "Views" {
+    abstract view_abstract_T {
+        - viewModel : viewModel_abstract_T
+        + run()
+        + addViewModel(viewModel : viewModel_abstract_T)
+        + updateUserInteraction()
+    }
+
+    package "viewPySide6" {
+        class viewPySide6_T {
+            + createWidget()
+            + connectSignals2Slots()
+        }
+        class mainWindow_T
+    }
+
+    package "viewConsole" {
+        class viewConsole_T
+    }
+
+    viewPySide6_T --|> view_abstract_T
+    viewConsole_T --|> view_abstract_T
+    mainWindow_T --* viewPySide6_T : has a
+}
+
+package "ViewModels" {
+    abstract viewModel_abstract_T{
+        - model : model_abstract_T
+        + widgetSignals_Callback(...)
+        + requestTaskProcessing(message: MessageObject)
+        + updateUI(message: MessageObject)
+    }
+    class viewModel_T
+    viewModel_T --|> viewModel_abstract_T
+}
+
+package "Models" {
+    queue MessageQueue {
+    }
+    class processResult {
+    }
+    class processMessage {
+    }
+    abstract model_abstract_T {
+        - processResult
+        - processMessage
+        + enqueueTask(task: Task)
+        + processResult(result: ResultObject)
+        + processMessage(message: MessageObject)
+    }
+    class model_T
+    model_T --|> model_abstract_T
+    processResult --* model_abstract_T
+    processMessage --* model_abstract_T
+}
+
+package "Consumer" {
+    class Consumer_T {
+        - model: model_abstract_T
+        + run()
+        + processTasks()
+    }
+    Consumer_T --* model_abstract_T : has a
+    Consumer_T --* TaskQueue
+    Consumer_T --* MessageQueue
+}
+
+package "messageObj"{
+    class MessageObject {
+    }
+}
+
+User -- view_abstract_T : interacts with
+view_abstract_T -- viewModel_abstract_T : binds to, emits signals
+viewModel_abstract_T -- model_abstract_T : MessagesQueue
+
+@enduml

@@ -1,0 +1,55 @@
+@startuml MVVM Class Diagram
+title **MVVM Class Diagram (Detailed - Python/PySide6)**
+
+left to right direction
+
+class User {
+}
+
+package "Views" {
+    abstract view_abstract_T
+    class viewPySide6_T
+    class viewConsole_T
+    class mainWindow_T
+    viewPySide6_T --|> view_abstract_T
+    viewConsole_T --|> view_abstract_T
+    mainWindow_T --* viewPySide6_T : has a
+}
+
+package "ViewModels" {
+    abstract viewModel_abstract_T
+    class viewModel_T
+    viewModel_T --|> viewModel_abstract_T
+}
+
+package "Models" {
+    abstract model_abstract_T
+    class model_T
+    model_T --|> model_abstract_T
+}
+
+package "Application" {
+    class lazyApp_T
+    class main
+    lazyApp_T *-- view_abstract_T
+    lazyApp_T *-- viewModel_abstract_T
+    lazyApp_T *-- model_abstract_T
+    main o-- lazyApp_T
+}
+
+User -- view_abstract_T : interacts with
+view_abstract_T -- viewModel_abstract_T : binds to, emits signals
+viewModel_abstract_T *-- model_abstract_T : has a
+
+
+skinparam class {
+    BackgroundColor White
+    BorderColor Black
+}
+skinparam abstract{
+    BackgroundColor LightGray
+    BorderColor Black
+    FontStyle italic
+}
+
+@enduml
