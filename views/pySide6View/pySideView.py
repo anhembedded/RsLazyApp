@@ -10,7 +10,8 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QWidget,
     QLabel,
-    QApplication
+    QApplication,
+    QLineEdit
 )
 from PySide6.QtCore import QObject, Signal, Slot
 
@@ -26,17 +27,22 @@ class viewPySide_T(view_abstract_T):
         # UI elements (initialize here for consistency)
         self.mainWindow = QMainWindow()
         self.label = QLabel("Example label")
+        self.variableText = QLabel("Some text")
         self.button = QPushButton("Example button")
-        self.button.clicked.connect(self.viewModel.example_button_clicked_callback)
         self.mainWindow.setWindowTitle("Development UI engine")
         # Layout
         layout = QVBoxLayout()
         layout.addWidget(self.label)
         layout.addWidget(self.button)
+        layout.addWidget(self.variableText)
 
         central_widget = QWidget()
         central_widget.setLayout(layout)
         self.mainWindow.setCentralWidget(central_widget)  # Corrected line!
+
+
+        self.button.clicked.connect(self.viewModel.example_button_clicked_callback)
+        self.variableText.setText(self.viewModel.variable)
 
 
     @override

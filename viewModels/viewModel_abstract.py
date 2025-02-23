@@ -14,3 +14,6 @@ class viewModel_abstract_T(QObject):  # Inherit from QObject
     def example_button_clicked_callback(self):
         self.__log.log(message="Button clicked", level=logging.INFO)
         self.buttonClicked.emit()  # Corrected signal emission and name
+
+    def updateCounter(self):
+        
