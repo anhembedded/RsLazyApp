@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="AppTab">
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="DHC_Tab" native="true">
+       <attribute name="title">
+        <string>DHC</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="VLS_Tab" native="true">
+       <attribute name="icon">
+        <iconset theme="address-book-new"/>
+       </attribute>
+       <attribute name="title">
+        <string>VLS</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="MQTT_Tab" native="true">
+       <attribute name="title">
+        <string>MQTT</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLazyApp">
+    <property name="title">
+     <string>LazyApp</string>
+    </property>
+    <addaction name="actionChangeVin"/>
+    <addaction name="actionSetFlag"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionTheme"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAnhTh49"/>
+   </widget>
+   <addaction name="menuLazyApp"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionChangeVin">
+   <property name="text">
+    <string>ChangeVin</string>
+   </property>
+  </action>
+  <action name="actionSetFlag">
+   <property name="text">
+    <string>SetFlag</string>
+   </property>
+  </action>
+  <action name="actionTheme">
+   <property name="text">
+    <string>Theme</string>
+   </property>
+  </action>
+  <action name="actionAnhTh49">
+   <property name="text">
+    <string>AnhTh49</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
