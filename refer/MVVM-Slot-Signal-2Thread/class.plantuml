@@ -1,5 +1,5 @@
 @startuml
-title **MVVM Class Diagram (Detailed - Python/PySide6)**
+title PySide6 MVVM Class Diagram (Threaded Model - Direct)
 
 left to right direction
 
@@ -11,10 +11,6 @@ skinparam abstract{
     BackgroundColor LightGray
     BorderColor Black
     FontStyle italic
-}
-skinparam queue {
-    BackGroundColor lightyellow
-    BorderColor orange
 }
 
 class User {
@@ -31,16 +27,18 @@ package "Application" {
 
 package "Views" {
     abstract view_abstract_T {
-        - viewModel : viewModel_abstract_T
+        - viewModel: viewModel_abstract_T
         + run()
-        + addViewModel(viewModel : viewModel_abstract_T)
+        + addViewModel(viewModel: viewModel_abstract_T)
         + updateUserInteraction()
+        + updateUI(data) <<signal>>
     }
 
     package "viewPySide6" {
         class viewPySide6_T {
             + createWidget()
             + connectSignals2Slots()
+            + buttonClicked() <<slot>>
         }
         class mainWindow_T
     }
@@ -51,58 +49,38 @@ package "Views" {
 
     viewPySide6_T --|> view_abstract_T
     viewConsole_T --|> view_abstract_T
-    mainWindow_T --* viewPySide6_T : has a
+    mainWindow_T --* viewPySide6_T: has a
 }
 
 package "ViewModels" {
     abstract viewModel_abstract_T{
-        - model : model_abstract_T
-        + widgetSignals_Callback(...)
+        - model: model_abstract_T
+        + widgetSignals_Callback(...) <<slot>>
         + requestTaskProcessing(message: MessageObject)
-        + updateUI(message: MessageObject)
+        + dataProcessed(result: ResultObject) <<slot>>
     }
     class viewModel_T
     viewModel_T --|> viewModel_abstract_T
 }
 
 package "Models" {
-    queue MessageQueue {
-    }
-    class processResult {
-    }
-    class processMessage {
-    }
     abstract model_abstract_T {
-        - processResult
-        - processMessage
-        + enqueueTask(task: Task)
-        + processResult(result: ResultObject)
-        + processMessage(message: MessageObject)
+        + processData(message: MessageObject)
+        + taskFinished(result: ResultObject) <<signal>>
     }
     class model_T
     model_T --|> model_abstract_T
-    processResult --* model_abstract_T
-    processMessage --* model_abstract_T
 }
 
-package "Consumer" {
-    class Consumer_T {
-        - model: model_abstract_T
-        + run()
-        + processTasks()
+package messageObj{
+    class ResultObject {
     }
-    Consumer_T --* model_abstract_T : has a
-    Consumer_T --* TaskQueue
-    Consumer_T --* MessageQueue
-}
-
-package "messageObj"{
     class MessageObject {
     }
 }
 
-User -- view_abstract_T : interacts with
-view_abstract_T -- viewModel_abstract_T : binds to, emits signals
-viewModel_abstract_T -- model_abstract_T : MessagesQueue
+User -- view_abstract_T: interacts with
+view_abstract_T -- viewModel_abstract_T: binds to, emits signals
+viewModel_abstract_T *-- model_abstract_T: has a
 
 @enduml

@@ -1,0 +1,22 @@
+@startuml
+title PySide6 MVVM Signal/Slot Sequence
+
+participant User
+participant View
+participant ViewModel
+participant Model
+
+User -> View : User Interaction (e.g., Button Click)
+activate View
+View -> ViewModel : Signal (e.g., buttonClicked)
+activate ViewModel
+ViewModel -> Model : Request Task (e.g., processData)
+activate Model
+Model -> Model : Process Data (Long Running Task)
+Model -> ViewModel : Signal (e.g., dataProcessed)
+deactivate Model
+ViewModel -> View : Signal (e.g., updateUI)
+deactivate ViewModel
+View -> View : Update UI
+deactivate View
+@enduml
