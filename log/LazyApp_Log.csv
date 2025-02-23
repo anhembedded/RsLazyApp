@@ -1219,3 +1219,44 @@ Timestamp,Level,File:Line,Message
 2025-02-23 21:52:08,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:18,task_buttonClicked
 2025-02-23 21:52:08,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:19,Simulating delay for 1.5 seconds
 2025-02-23 21:52:10,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:22,Task completed
+2025-02-23 23:03:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\main.py:6,____Starting [lazyAppUI_T]____
+2025-02-23 23:03:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 23:03:56,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:21,Running [lazyAppUI_T]
+2025-02-23 23:03:56,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:25,Running [UI task]
+2025-02-23 23:03:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:11,Initializing [ViewAbstract_T]
+2025-02-23 23:03:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:12,Initializing [ViewModelAbstract_T]
+2025-02-23 23:03:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:14,Initializing [model_abstract_T]
+2025-02-23 23:03:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 23:03:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 23:03:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 23:03:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:53,Running [viewPySide_T]
+2025-02-23 23:03:58,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:18,task_buttonClicked
+2025-02-23 23:03:58,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:19,Simulating delay for 1.5 seconds
+2025-02-23 23:03:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:22,Task completed
+2025-02-23 23:03:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:18,task_buttonClicked
+2025-02-23 23:03:59,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:19,Simulating delay for 1.5 seconds
+2025-02-23 23:04:01,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:22,Task completed
+2025-02-23 23:04:01,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:18,task_buttonClicked
+2025-02-23 23:04:01,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:19,Simulating delay for 1.5 seconds
+2025-02-24 00:06:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\main.py:6,____Starting [lazyAppUI_T]____
+2025-02-24 00:06:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-24 00:06:23,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:21,Running [lazyAppUI_T]
+2025-02-24 00:06:23,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:25,Running [UI task]
+2025-02-24 00:06:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:11,Initializing [ViewAbstract_T]
+2025-02-24 00:06:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:12,Initializing [ViewModelAbstract_T]
+2025-02-24 00:06:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:14,Initializing [model_abstract_T]
+2025-02-24 00:06:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-24 00:06:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-24 00:06:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-24 00:06:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:53,Running [viewPySide_T]
+2025-02-24 00:06:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:18,task_buttonClicked
+2025-02-24 00:06:29,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:19,Simulating delay for 1.5 seconds
+2025-02-24 00:06:30,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:22,Task completed
+2025-02-24 00:06:30,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:18,task_buttonClicked
+2025-02-24 00:06:30,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:19,Simulating delay for 1.5 seconds
+2025-02-24 00:06:32,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:22,Task completed
+2025-02-24 00:06:32,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:18,task_buttonClicked
+2025-02-24 00:06:32,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:19,Simulating delay for 1.5 seconds
+2025-02-24 00:06:33,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:22,Task completed
+2025-02-24 00:06:33,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:18,task_buttonClicked
+2025-02-24 00:06:33,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:19,Simulating delay for 1.5 seconds
