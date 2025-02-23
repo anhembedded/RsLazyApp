@@ -27,7 +27,7 @@ class viewPySide_T(view_abstract_T):
         # UI elements (initialize here for consistency)
         self.mainWindow = mainWindow_T()
         self.mainWindow.show()
-       
+
     @override
     def run(self):
         self.__log.log(message="Running [viewPySide_T]", level=logging.INFO)
