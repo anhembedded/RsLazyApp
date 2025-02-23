@@ -1,4 +1,5 @@
 from typing import override
+import sys
 from utility.log import Logger_T, logging
 from views.view_abstract import view_abstract_T
 
@@ -8,25 +9,26 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QWidget,
     QLabel,
+    QApplication
 )
 from PySide6.QtCore import QObject, Signal, Slot
 
 
-
-class viewPySide_T(view_abstract_T, QMainWindow):  # Inherit from QMainWindow
+class viewPySide_T(view_abstract_T, QObject):
     def __init__(self):
         view_abstract_T.__init__(self)
-        QMainWindow.__init__(self)  # Call QMainWindow's __init__
+        QObject.__init__(self)
         self.__log = Logger_T()
         self.__log.log(message="Initializing [viewPySide]", level=logging.INFO)
-        self.createWidgets()
 
     @override
     def createWidgets(self):
-        self.setWindowTitle("Development UI engine")
-        # UI elements
+        # UI elements (initialize here for consistency)
+        self.mainWindow = QMainWindow()
         self.label = QLabel("Example label")
-        self.button = QPushButton("Example label")
+        self.button = QPushButton("Example button")
+        self.button.clicked.connect(self.viewModel.example_button_clicked_callback)
+        self.mainWindow.setWindowTitle("Development UI engine")
         # Layout
         layout = QVBoxLayout()
         layout.addWidget(self.label)
@@ -34,14 +36,13 @@ class viewPySide_T(view_abstract_T, QMainWindow):  # Inherit from QMainWindow
 
         central_widget = QWidget()
         central_widget.setLayout(layout)
-        self.setCentralWidget(central_widget)
+        self.mainWindow.setCentralWidget(central_widget)  # Corrected line!
 
-
-
-    def on_button_clicked(self):
-        self.__log.log(message="Button clicked", level=logging.INFO)
 
     @override
     def run(self):
         self.__log.log(message="Running [viewPySide_T]", level=logging.INFO)
-        self.show()
+        app = QApplication(sys.argv)
+        self.createWidgets()
+        self.mainWindow.show()
+        sys.exit(app.exec())

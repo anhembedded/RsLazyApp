@@ -1,20 +1,17 @@
 @startuml
 title **MVVM with Producer-Consumer and Qt Signals/Slots**
-
+!pragma teoz true
 actor "User" as U
 
 box "Main Thread (UI Thread)" #LightBlue
     participant "**View (UI)**" as V
     participant "**ViewModel**" as VM
-end box
-
-box "Sub Thread (Consumer)" #LightGreen
-    participant "**Consumer**" as C
-end box
-
-box "Sub Thread (Model/Producer)" #LightCoral
-    participant "**Model (Logic & Producer)**" as MP
-    queue "**Task Queue**\n(Thread-Safe)" as TQ <<synchronized>>
+    box "Sub Thread (Consumer)" #LightGreen
+        participant "**Consumer**" as C
+    end box
+    box "Sub Thread (Model/Producer)" #LightCoral
+        participant "**Model (Logic & Producer)**" as MP
+    end box
 end box
 
 ' --- User Interaction & Task Creation ---
@@ -22,22 +19,22 @@ U -> V: User interacts with UI
 activate V
 V -> VM: Sends user action (e.g., command)
 activate VM
-VM -> MP: requestTaskProcessing(messageObj)
 activate MP
-MP -> MP: Processes messageObj
-MP -> TQ: Enqueues taskObj to Task Queue
-deactivate MP
+
+alt messageObj is signalObj
+    MP -> MP: Processes messageObj
+else messageObj is resultObjObj
+    MP -> MP: Processes resultObj
+    MP -> VM: Emits signal taskFinished(resultObj)
+    deactivate MP
+end
 
 ' --- Task Consumption & Processing ---
-C -> TQ: Dequeues taskObj from Task Queue
 activate C
 C -> C: Processes taskObj
 C -> MP: Emits signal taskCompleted(resultObj)
 deactivate C
-activate MP
-MP -> MP: Processes resultObj
-MP -> VM: Emits signal taskFinished(resultObj)
-deactivate MP
+
 activate VM
 VM -> VM: Processes resultObj
 VM -> V: Emits signal updateUI(data)

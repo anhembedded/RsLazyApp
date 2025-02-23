@@ -212,3 +212,352 @@ Timestamp,Level,File:Line,Message
 2025-02-23 02:11:49,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
 2025-02-23 02:11:49,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:21,Initializing [viewPySide]
 2025-02-23 02:11:49,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:46,Running [viewPySide_T]
+2025-02-23 15:36:18,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:36:18,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:36:18,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:38:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:38:23,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:38:23,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:39:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:39:29,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:39:29,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:40:57,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:40:57,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:40:57,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:41:32,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:41:32,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:41:32,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:41:35,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:41:35,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:41:35,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:41:36,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:41:36,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:41:36,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:41:37,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:41:37,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:41:37,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:41:37,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:41:37,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:41:37,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:41:42,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:41:42,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:41:42,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:42:18,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:42:18,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:42:18,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:42:57,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:42:57,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:42:57,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:47:39,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:47:39,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:47:39,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:47:39,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:47:39,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:21,Initializing [viewPySide]
+2025-02-23 15:47:39,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:46,Running [viewPySide_T]
+2025-02-23 15:48:32,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:48:32,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:48:32,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:48:32,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:48:32,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:21,Initializing [viewPySide]
+2025-02-23 15:48:32,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:46,Running [viewPySide_T]
+2025-02-23 15:49:19,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:49:19,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:49:19,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:49:19,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:49:19,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:21,Initializing [viewPySide]
+2025-02-23 15:49:19,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:32,Creating [viewPySide_T] widgets
+2025-02-23 15:49:19,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:53,Running [viewPySide_T]
+2025-02-23 15:49:21,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:47,Button clicked
+2025-02-23 15:49:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:47,Button clicked
+2025-02-23 15:49:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:47,Button clicked
+2025-02-23 15:49:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:47,Button clicked
+2025-02-23 15:49:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:47,Button clicked
+2025-02-23 15:49:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:47,Button clicked
+2025-02-23 15:49:58,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:49:58,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:49:58,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:49:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:49:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:21,Initializing [viewPySide]
+2025-02-23 15:49:59,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:32,Creating [viewPySide_T] widgets
+2025-02-23 15:49:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:53,Running [viewPySide_T]
+2025-02-23 15:50:00,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:47,Button clicked
+2025-02-23 15:50:00,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:47,Button clicked
+2025-02-23 15:50:00,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:47,Button clicked
+2025-02-23 15:50:01,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:47,Button clicked
+2025-02-23 15:50:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:50:52,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:50:52,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:50:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:50:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:21,Initializing [viewPySide]
+2025-02-23 15:51:42,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:51:42,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:51:42,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:51:42,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:51:42,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:21,Initializing [viewPySide]
+2025-02-23 15:51:42,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:31,Creating [viewPySide_T] widgets
+2025-02-23 15:51:42,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:52,Running [viewPySide_T]
+2025-02-23 15:51:43,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:45,Button clicked
+2025-02-23 15:51:44,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:45,Button clicked
+2025-02-23 15:51:44,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:45,Button clicked
+2025-02-23 15:54:10,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:12,Initializing [lazyAppUI_T]
+2025-02-23 15:54:10,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:19,Running [lazyAppUI_T]
+2025-02-23 15:54:10,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:23,Running [UI task]
+2025-02-23 15:54:10,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:54:10,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:21,Initializing [viewPySide]
+2025-02-23 15:54:10,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:43,Running [viewPySide_T]
+2025-02-23 15:56:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:13,Initializing [lazyAppUI_T]
+2025-02-23 15:56:14,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:20,Running [lazyAppUI_T]
+2025-02-23 15:56:14,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [UI task]
+2025-02-23 15:56:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 15:56:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 15:56:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:56:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:21,Initializing [viewPySide]
+2025-02-23 15:56:14,ERROR,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:15,ViewModel allready set
+2025-02-23 15:56:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:43,Running [viewPySide_T]
+2025-02-23 15:57:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:13,Initializing [lazyAppUI_T]
+2025-02-23 15:57:29,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:20,Running [lazyAppUI_T]
+2025-02-23 15:57:29,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [UI task]
+2025-02-23 15:57:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 15:57:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 15:57:44,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:13,Initializing [lazyAppUI_T]
+2025-02-23 15:57:44,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:20,Running [lazyAppUI_T]
+2025-02-23 15:57:44,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [UI task]
+2025-02-23 15:57:44,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 15:57:44,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 15:57:44,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:57:44,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 15:57:44,ERROR,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:15,ViewModel allready set
+2025-02-23 15:57:44,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 15:58:46,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:13,Initializing [lazyAppUI_T]
+2025-02-23 15:58:46,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:20,Running [lazyAppUI_T]
+2025-02-23 15:58:46,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [UI task]
+2025-02-23 15:58:46,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 15:58:46,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 15:58:46,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:58:46,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 15:58:46,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 15:58:46,ERROR,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:16,ViewModel allready set
+2025-02-23 15:58:46,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 15:59:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:13,Initializing [lazyAppUI_T]
+2025-02-23 15:59:22,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:20,Running [lazyAppUI_T]
+2025-02-23 15:59:22,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [UI task]
+2025-02-23 15:59:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 15:59:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 15:59:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 15:59:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 15:59:22,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 15:59:22,ERROR,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:16,ViewModel allready set
+2025-02-23 15:59:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 16:00:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:13,Initializing [lazyAppUI_T]
+2025-02-23 16:00:52,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:20,Running [lazyAppUI_T]
+2025-02-23 16:00:52,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [UI task]
+2025-02-23 16:00:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:00:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:00:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:00:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:00:52,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 16:00:52,ERROR,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:16,ViewModel allready set
+2025-02-23 16:00:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 16:01:04,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:13,Initializing [lazyAppUI_T]
+2025-02-23 16:01:04,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:20,Running [lazyAppUI_T]
+2025-02-23 16:01:04,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [UI task]
+2025-02-23 16:01:04,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:01:04,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:01:04,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:01:04,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:01:04,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 16:01:04,ERROR,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:16,ViewModel allready set
+2025-02-23 16:01:04,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 16:01:35,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:13,Initializing [lazyAppUI_T]
+2025-02-23 16:01:35,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:20,Running [lazyAppUI_T]
+2025-02-23 16:01:35,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [UI task]
+2025-02-23 16:01:35,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:01:35,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:01:35,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:01:35,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:01:35,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 16:01:35,ERROR,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:16,ViewModel allready set
+2025-02-23 16:01:35,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 16:01:58,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:13,Initializing [lazyAppUI_T]
+2025-02-23 16:01:58,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:20,Running [lazyAppUI_T]
+2025-02-23 16:01:58,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [UI task]
+2025-02-23 16:01:58,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:01:58,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:01:58,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:01:58,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:02:15,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 16:02:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:13,Initializing [lazyAppUI_T]
+2025-02-23 16:02:53,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:20,Running [lazyAppUI_T]
+2025-02-23 16:02:53,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [UI task]
+2025-02-23 16:02:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:02:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:02:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:02:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:02:54,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 16:02:54,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 16:02:58,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Button clicked
+2025-02-23 16:02:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Button clicked
+2025-02-23 16:02:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Button clicked
+2025-02-23 16:03:00,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Button clicked
+2025-02-23 16:03:00,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Button clicked
+2025-02-23 16:16:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:16:51,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:16:51,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:16:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Initializing [ViewModelAbstract_T]
+2025-02-23 16:16:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:16:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:16:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:16:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:7,Initializing [model_abstract_T]
+2025-02-23 16:17:24,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:17:24,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:17:24,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:17:24,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Initializing [ViewModelAbstract_T]
+2025-02-23 16:17:24,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:17:24,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:17:24,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:17:24,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:7,Initializing [model_abstract_T]
+2025-02-23 16:17:24,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 16:17:24,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 16:17:24,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 16:17:26,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:17,Button clicked
+2025-02-23 16:19:57,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:19:57,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:19:57,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:19:57,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:12,Initializing [ViewModelAbstract_T]
+2025-02-23 16:19:57,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:19:57,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:19:57,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:19:57,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:7,Initializing [model_abstract_T]
+2025-02-23 16:19:57,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 16:19:57,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 16:19:57,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 16:19:58,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:20,Button clicked
+2025-02-23 16:19:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:20,Button clicked
+2025-02-23 16:19:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:20,Button clicked
+2025-02-23 16:20:00,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:20,Button clicked
+2025-02-23 16:20:00,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:20,Button clicked
+2025-02-23 16:20:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:20:53,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:20:53,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:20:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:12,Initializing [ViewModelAbstract_T]
+2025-02-23 16:20:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:20:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:20:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:20:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:8,Initializing [model_abstract_T]
+2025-02-23 16:20:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 16:20:53,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 16:20:53,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 16:20:55,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:20,Button clicked
+2025-02-23 16:20:55,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:20,Button clicked
+2025-02-23 16:20:55,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:20,Button clicked
+2025-02-23 16:20:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:20,Button clicked
+2025-02-23 16:20:56,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:20,Button clicked
+2025-02-23 16:21:12,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:21:12,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:21:12,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:21:12,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:12,Initializing [ViewModelAbstract_T]
+2025-02-23 16:21:12,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:21:12,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:21:12,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:21:12,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:8,Initializing [model_abstract_T]
+2025-02-23 16:21:12,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 16:21:12,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 16:21:12,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 16:32:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:32:22,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:32:22,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:32:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Initializing [ViewModelAbstract_T]
+2025-02-23 16:32:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:32:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:32:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:32:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:9,Initializing [model_abstract_T]
+2025-02-23 16:32:22,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 16:33:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:33:23,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:33:23,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:33:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Initializing [ViewModelAbstract_T]
+2025-02-23 16:33:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:33:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:33:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:33:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:9,Initializing [model_abstract_T]
+2025-02-23 16:33:23,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 16:34:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:34:29,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:34:29,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:34:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Initializing [ViewModelAbstract_T]
+2025-02-23 16:34:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:34:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:34:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:34:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:9,Initializing [model_abstract_T]
+2025-02-23 16:34:29,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 16:34:37,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:34:37,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:34:37,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:34:37,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Initializing [ViewModelAbstract_T]
+2025-02-23 16:34:37,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:34:37,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:34:37,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:34:37,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:9,Initializing [model_abstract_T]
+2025-02-23 16:34:37,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 16:36:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:36:51,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:36:51,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:36:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Initializing [ViewModelAbstract_T]
+2025-02-23 16:36:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:36:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:36:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:36:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:9,Initializing [model_abstract_T]
+2025-02-23 16:36:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 16:36:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:36:59,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:36:59,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:36:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Initializing [ViewModelAbstract_T]
+2025-02-23 16:36:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:36:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:36:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:36:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:9,Initializing [model_abstract_T]
+2025-02-23 16:36:59,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:9,Initializing [model_T]
+2025-02-23 16:39:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:39:14,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:39:14,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:39:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Initializing [ViewModelAbstract_T]
+2025-02-23 16:39:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:39:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:39:14,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:39:34,INFO,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:15,Initializing [lazyAppUI_T]
+2025-02-23 16:39:34,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:24,Running [lazyAppUI_T]
+2025-02-23 16:39:34,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\lazyApp.py:28,Running [UI task]
+2025-02-23 16:39:34,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:11,Initializing [ViewModelAbstract_T]
+2025-02-23 16:39:34,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel.py:8,Initializing [ViewModelAbstract_T]
+2025-02-23 16:39:34,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:8,Initializing [ViewAbstract_T]
+2025-02-23 16:39:34,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:22,Initializing [viewPySide]
+2025-02-23 16:39:34,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:9,Initializing [model_abstract_T]
+2025-02-23 16:39:34,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model.py:10,Initializing [model_T]
+2025-02-23 16:39:38,DEBUG,c:\Users\hoang\Downloads\RsLazyApp\views\view_abstract.py:12,Adding ViewModel
+2025-02-23 16:39:38,INFO,c:\Users\hoang\Downloads\RsLazyApp\views\pySide6View\pySideView.py:44,Running [viewPySide_T]
+2025-02-23 16:39:45,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:45,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:47,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:47,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:48,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:48,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:49,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:49,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:49,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:49,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:50,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:50,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:50,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:50,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:50,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:50,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:51,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
+2025-02-23 16:39:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\viewModels\viewModel_abstract.py:15,Button clicked
+2025-02-23 16:39:52,INFO,c:\Users\hoang\Downloads\RsLazyApp\models\model_abstract.py:13,task_buttonClicked
