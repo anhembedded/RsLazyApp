@@ -19,10 +19,10 @@ class Model(QObject):
         super().__init__()
 
     def processData(self, message):
-        # Simulate long-running task
-        import time
-        time.sleep(2)  # Simulate work
+        # Simulate long-running task (without sleep)
+        print(f"Model: Processing data {message.data} in sub-thread.")
         result = message.data * 2
+        print(f"Model: Data processing complete. Result: {result}")
         self.taskFinished.emit(ResultObject(result))
 
 # ViewModel (Main Thread)
@@ -35,10 +35,12 @@ class ViewModel(QObject):
         self.model.taskFinished.connect(self.dataProcessed)
 
     def requestTaskProcessing(self, message):
+        print(f"ViewModel: Requesting data processing for {message.data}.")
         self.model.processData(message)
 
     @Slot(ResultObject)
     def dataProcessed(self, result):
+        print(f"ViewModel: Data processed. Result: {result.result}. Updating UI.")
         self.updateUI.emit(result)
 
 # View (Main Thread)
@@ -64,11 +66,13 @@ class View(QMainWindow):
         self.layout.addWidget(self.label)
 
     def onButtonClicked(self):
+        print("View: Button clicked.")
         self.viewModel.requestTaskProcessing(MessageObject(10))
 
     @Slot(ResultObject)
     def updateLabel(self, result):
         self.label.setText(f"Result: {result.result}")
+        print(f"View: UI updated with result: {result.result}")
 
 # Application
 class lazyApp_T(QObject):
@@ -93,4 +97,4 @@ if __name__ == "__main__":
     lazy_app = lazyApp_T()
     lazy_app.run()
     sys.exit(app.exec())
-    lazy_app.close() #Close threads.
+    lazy_app.close()

@@ -1,5 +1,5 @@
 @startuml
-title **MVVM with Producer-Consumer (Model and Producer Combined, No Cancellation)**
+title **MVVM with Producer-Consumer (Model and Producer Combined, not use signal and slot in multiThread support by Qt framework)**
 
 actor "User" as U
 
