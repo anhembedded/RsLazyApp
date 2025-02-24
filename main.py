@@ -5,4 +5,4 @@ if __name__ == "__main__":
     log = Logger_T()
     log.log(message="____Starting [lazyAppUI_T]____", level=logging.INFO)
     lazyApp = lazyAppUI_T()
-    lazyApp.run() 
+    lazyApp.run()
