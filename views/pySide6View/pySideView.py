@@ -4,6 +4,7 @@ from utility.log import Logger_T, logging
 from views.view_abstract import view_abstract_T
 from viewModels.viewModel_abstract import viewModel_abstract_T
 from views.pySide6View.mainWindow.mainWindow import mainWindow_T
+from views.pySide6View.Widget.terminalLike.terminalLike import TerminalWidget_T
 
 from PySide6.QtWidgets import (
     QMainWindow,
@@ -26,6 +27,10 @@ class viewPySide_T(view_abstract_T):
     def createWidgets(self):
         # UI elements (initialize here for consistency)
         self.mainWindow = mainWindow_T()
+        self.terminalLike = TerminalWidget_T()
+        layout = QVBoxLayout()
+        layout.addWidget(self.terminalLike)
+        self.mainWindow.groupBox_terminalLike.setLayout(layout)
         self.mainWindow.show()
 
     @override

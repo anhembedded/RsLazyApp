@@ -1,0 +1,6 @@
+{
+  "getVinID": {
+    "cmd": "adb1 shell getVinID",
+    "arg": "File"
+  }
+}

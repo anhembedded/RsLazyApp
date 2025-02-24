@@ -1,288 +1,118 @@
-# RsLazyApp
 
-# AI script
+# PySide6 Terminal
 
+## Overview
 
-**i have seuquence design like that** 
+This project is a simple terminal-like widget built using PySide6 (Qt for Python). It provides a graphical interface with an input field for entering commands and an output area for displaying responses. The application follows the **Model-View-Controller (MVC) pattern** to separate logic, UI, and control flow.
 
-""
+## Features
 
-@startuml
+* **Read-Only Display**: The terminal output is read-only.
+* **Command Input**: A dedicated input field allows the user to enter commands.
+* **Command History**: Users can navigate through previously entered commands using the Up and Down arrow keys.
+* **Cursor Control**: The cursor is restricted to the input area.
+* **Handling Enter Key**: Commands are executed when the Enter key is pressed.
+* **Scrollable Output**: The terminal output can be scrolled.
+* **Monospace Font**: Uses a consistent monospace font for better readability.
+* **Colored Output**: Command responses are displayed with different colors.
 
-title **MVVM with Producer-Consumer (Model and Producer Combined, No Cancellation)**
+## Installation
 
-actor"User"asU
+Ensure you have **Python 3.7+** installed. Install the required dependencies using:
 
-box"Main Thread (UI Thread)" #LightBlue
+```
+pip install PySide6
+```
 
-    participant"**View (UI)**"asV
+## Usage
 
-    participant"**ViewModel**"asVM
+Run the script using:
 
-endbox
+```
+python terminalLike.py
+```
 
-box"Sub Thread (Consumer)" #LightGreen
+## Commands
 
-    participant"**Consumer**"asCS
+| Command                      | Description                       |
+| ---------------------------- | --------------------------------- |
+| `<span>help</span>`        | Displays available commands.      |
+| `<span>clear</span>`       | Clears the terminal output.       |
+| `<span>echo [text]</span>` | Displays the given text in green. |
+| Unknown Command              | Shows an error message in red.    |
 
-endbox
+## Code Structure
 
-box"Sub Thread (Model/Producer)" #LightCoral
+This project follows an **MVC architecture**:
 
-    queue"**Message Queue**\n(Thread-Safe)"asMQ <`<synchronized>`>
+### 1. **Model (**`<span><strong>TerminalModel</strong></span>`**)**
 
-    participant"**Model (Logic & Producer)**"asMP
+* Manages command execution.
+* Stores command history.
+* Provides navigation for previous/next commands.
 
-    queue"**Task Queue**\n(Thread-Safe)"asTQ <`<synchronized>`>
+### 2. **View (**`<span><strong>TerminalView</strong></span>`**)**
 
-endbox
+* Handles the graphical UI.
+* Displays command output.
+* Manages user input interactions.
+* Implements an **event filter** for capturing arrow key events.
 
-' --- User Interaction & Task Creation ---
+### 3. **Controller (**`<span><strong>TerminalController</strong></span>`**)**
 
-U->V: User interacts with UI
+* Connects the **Model** and **View**.
+* Processes user input and updates the output.
+* Calls the **Model** to execute commands and retrieve history.
 
-activateV
+## How to Modify
 
-V->VM: Sends user action (e.g., command)
+### Change the Command Logic
 
-activateVM
+Modify the `<span>execute_command</span>` method inside `<span>TerminalModel</span>`:
 
-VM->MQ: MessageObject is sent to Model
+```
+if command == "mycommand":
+    return "<span style='color:blue;'>This is a custom command response!</span>"
+```
 
-deactivateVM
+### Customize UI Elements
 
-activateMP
+Modify the `<span>init_ui</span>` method inside `<span>TerminalView</span>` to change font, colors, or layout:
 
-MP->MQ: MessageObject get messageObj from queue
+```
+self.output.setFont(QFont("Courier", 12))  # Change font size to 12
+self.input.setStyleSheet("background-color: #222; color: white;")  # Dark theme input
+```
 
-MP->MP: Processes messageObj
+### Add More Features
 
-noterightofMP: Model/Producerpreparesthetaskandaddsittothequeue.
+To extend the functionality, modify the **controller** to support additional input processing.
 
-MP->TQ: Pushes taskObj to queue
+## Troubleshooting
 
-' --- Task Consumption & Processing ---
+### `<span>ModuleNotFoundError: No module named 'PySide6'</span>`
 
-CS->TQ: Fetches task from queue (blocks until available)
+Ensure PySide6 is installed:
 
-activateCS
+```
+pip install PySide6
+```
 
-loopWhiletaskavailable
+### UI Does Not Appear
 
-    CS->CS: Processes task
+Make sure the script is run directly:
 
-    altonerrorduringprocessing
+```python-repl
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    controller = TerminalController()
+    sys.exit(app.exec())
+```
 
-    CS->MP: Sends ResultObject with error to Model
+## License
 
-    elsesuccessfulprocessing
+This project is licensed under the **MIT License**.
 
-    CS->MP: Sends ResultObject with success to Model
+## Author
 
-    end
-
-end
-
-deactivateCS
-
-MP->VM: Send MessageObject to ViewModel
-
-MP->MP: Processes MessageObject
-
-deactivateMP
-
-activateVM
-
-VM->VM: Processes MessageObject
-
-VM->V: Notifies UI, by DataBinding
-
-deactivateVM
-
-deactivateV
-
-@enduml
-
-**and you have me to extend class diagram follow up to sequecy diagram**
-
-""
-
-@startuml
-
-title **MVVM Class Diagram (Detailed - Python/PySide6)**
-
-lefttorightdirection
-
-classUser {
-
-}
-
-package"Views" {
-
-    abstractview_abstract_T {
-
-    - viewModel : viewModel_abstract_T
-
-    + run()
-
-    + addViewModel(viewModel : viewModel_abstract_T)
-
-    + updateUserInteraction()
-
-    }
-
-    package"viewPySide6" {
-
-    classviewPySide6_T {
-
-    +createWidget()
-
-    +connectSignals2Slots()
-
-    }
-
-    classmainWindow_T
-
-    }
-
-    package"viewConsole" {
-
-    classviewConsole_T
-
-    }
-
-    viewPySide6_T --|> view_abstract_T
-
-    viewConsole_T --|> view_abstract_T
-
-    mainWindow_T --* viewPySide6_T : hasa
-
-}
-
-package"ViewModels" {
-
-    abstractviewModel_abstract_T{
-
-    - model : model_abstract_T
-
-    + widgetSignals_Callback(...)
-
-    + requestTaskProcessing()
-
-    + updateUI()
-
-    }
-
-    classviewModel_T
-
-    viewModel_T --|> viewModel_abstract_T
-
-}
-
-package"Models" {
-
-    abstractmodel_abstract_T {
-
-    + enqueueTask(task: Task)
-
-    + processResult(result: ResultObject)
-
-    + processError(error: ErrorObject)
-
-    }
-
-    classmodel_T
-
-    model_T --|> model_abstract_T
-
-}
-
-package"Application" {
-
-    classlazyApp_T
-
-    classmain
-
-    lazyApp_T *-- view_abstract_T
-
-    lazyApp_T *-- viewModel_abstract_T
-
-    lazyApp_T *-- model_abstract_T
-
-    maino-- lazyApp_T
-
-}
-
-package"Threading" {
-
-  classTask {
-
-  }
-
-  classResultObject {
-
-  }
-
-  classErrorObject {
-
-  }
-
-  classTaskQueue << (T,#FF7700) >> {
-
-    + enqueue(task: Task)
-
-    + dequeue(): Task
-
-  }
-
-  classWorkerThread {
-
-    - taskQueue: TaskQueue
-
-    - model: model_abstract_T
-
-    + run()
-
-    + processTasks()
-
-  }
-
-  WorkerThread --* model_abstract_T : hasa
-
-  WorkerThread --* TaskQueue : uses
-
-}
-
-User -- view_abstract_T : interactswith
-
-view_abstract_T -- viewModel_abstract_T : bindsto, emitssignals
-
-viewModel_abstract_T *-- model_abstract_T : hasa
-
-skinparamclass {
-
-    BackgroundColorWhite
-
-    BorderColorBlack
-
-}
-
-skinparamabstract{
-
-    BackgroundColorLightGray
-
-    BorderColorBlack
-
-    FontStyleitalic
-
-}
-
-skinparamqueue {
-
-  BackGroundColorlightyellow
-
-  BorderColororange
-
-}
-
-@enduml
+Created by AnhTH49

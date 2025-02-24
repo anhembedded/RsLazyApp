@@ -1,7 +1,7 @@
-from views.pySide6View.mainWindow.AutoGen_mainWindow import Ui_MainWindow
-from PySide6.QtWidgets import QWidget, QMainWindow
+from views.pySide6View.mainWindow.AutoGen_mainWindow import Ui_MainWindow_autoGen_T
+from PySide6.QtWidgets import  QMainWindow
 
-class mainWindow_T(QMainWindow,Ui_MainWindow):
+class mainWindow_T(QMainWindow,Ui_MainWindow_autoGen_T):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
