@@ -41,7 +41,7 @@ class JsonHighlighter(QSyntaxHighlighter):
                 self.setFormat(match.capturedStart(), match.capturedLength(), format)
 
 
-class JsonEditorWidget(QWidget):
+class JsonEditorWidget_T(QWidget):
     """A widget for displaying and editing JSON data with syntax highlighting and zoom."""
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -145,7 +145,7 @@ if __name__ == "__main__":
     }
 
     # Create and show the widget
-    editor = JsonEditorWidget()
+    editor = JsonEditorWidget_T()
     editor.set_json(sample_data)
     editor.resize(600, 400)
     editor.show()

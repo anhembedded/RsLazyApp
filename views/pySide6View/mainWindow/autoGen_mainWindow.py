@@ -16,17 +16,17 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QGridLayout,
-    QGroupBox, QHBoxLayout, QLabel, QLineEdit,
-    QMainWindow, QMenu, QMenuBar, QPushButton,
-    QSizePolicy, QSpinBox, QStatusBar, QTabWidget,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
+    QGridLayout, QGroupBox, QHBoxLayout, QLabel,
+    QLineEdit, QMainWindow, QMenu, QMenuBar,
+    QPushButton, QSizePolicy, QSpinBox, QStatusBar,
+    QTabWidget, QVBoxLayout, QWidget)
 
 class Ui_MainWindow_autoGen_T(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1363, 831)
+        MainWindow.resize(1274, 755)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -42,33 +42,47 @@ class Ui_MainWindow_autoGen_T(object):
         self.actionAnhTh49.setObjectName(u"actionAnhTh49")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.horizontalLayout = QHBoxLayout(self.centralwidget)
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.AppTab = QTabWidget(self.centralwidget)
+        self.widget = QWidget(self.centralwidget)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(9, 9, 1250, 702))
+        self.gridLayout_2 = QGridLayout(self.widget)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.frame_jsonEdit = QFrame(self.widget)
+        self.frame_jsonEdit.setObjectName(u"frame_jsonEdit")
+        sizePolicy.setHeightForWidth(self.frame_jsonEdit.sizePolicy().hasHeightForWidth())
+        self.frame_jsonEdit.setSizePolicy(sizePolicy)
+        self.frame_jsonEdit.setMinimumSize(QSize(671, 361))
+        self.frame_jsonEdit.setFrameShape(QFrame.StyledPanel)
+        self.frame_jsonEdit.setFrameShadow(QFrame.Raised)
+
+        self.gridLayout_2.addWidget(self.frame_jsonEdit, 1, 0, 1, 1)
+
+        self.AppTab = QTabWidget(self.widget)
         self.AppTab.setObjectName(u"AppTab")
         sizePolicy.setHeightForWidth(self.AppTab.sizePolicy().hasHeightForWidth())
         self.AppTab.setSizePolicy(sizePolicy)
-        self.AppTab.setMinimumSize(QSize(670, 562))
+        self.AppTab.setMinimumSize(QSize(671, 321))
         self.AppTab.setAutoFillBackground(True)
         self.DHC_Tab = QWidget()
         self.DHC_Tab.setObjectName(u"DHC_Tab")
         self.pushButton = QPushButton(self.DHC_Tab)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setGeometry(QRect(30, 240, 111, 31))
-        self.widget = QWidget(self.DHC_Tab)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(30, 30, 621, 121))
-        self.horizontalLayout_3 = QHBoxLayout(self.widget)
+        self.layoutWidget = QWidget(self.DHC_Tab)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(30, 30, 621, 121))
+        self.horizontalLayout_3 = QHBoxLayout(self.layoutWidget)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
-        self.label_intervalUnit = QLabel(self.widget)
+        self.label_intervalUnit = QLabel(self.layoutWidget)
         self.label_intervalUnit.setObjectName(u"label_intervalUnit")
 
         self.gridLayout.addWidget(self.label_intervalUnit, 0, 0, 1, 1)
 
-        self.comboBox_intervalUnit = QComboBox(self.widget)
+        self.comboBox_intervalUnit = QComboBox(self.layoutWidget)
         icon = QIcon(QIcon.fromTheme(u"applications-utilities"))
         self.comboBox_intervalUnit.addItem(icon, "")
         self.comboBox_intervalUnit.addItem("")
@@ -81,12 +95,12 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.gridLayout.addWidget(self.comboBox_intervalUnit, 0, 1, 1, 2)
 
-        self.pushButton_2 = QPushButton(self.widget)
+        self.pushButton_2 = QPushButton(self.layoutWidget)
         self.pushButton_2.setObjectName(u"pushButton_2")
 
         self.gridLayout.addWidget(self.pushButton_2, 0, 3, 1, 1)
 
-        self.label_IntervalValue = QLabel(self.widget)
+        self.label_IntervalValue = QLabel(self.layoutWidget)
         self.label_IntervalValue.setObjectName(u"label_IntervalValue")
         sizePolicy1 = QSizePolicy(QSizePolicy.Policy.MinimumExpanding, QSizePolicy.Policy.Preferred)
         sizePolicy1.setHorizontalStretch(0)
@@ -97,13 +111,13 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.gridLayout.addWidget(self.label_IntervalValue, 1, 0, 1, 2)
 
-        self.spinBox_IntervalValue = QSpinBox(self.widget)
+        self.spinBox_IntervalValue = QSpinBox(self.layoutWidget)
         self.spinBox_IntervalValue.setObjectName(u"spinBox_IntervalValue")
         self.spinBox_IntervalValue.setFont(font)
 
         self.gridLayout.addWidget(self.spinBox_IntervalValue, 1, 2, 1, 1)
 
-        self.pushButton_3 = QPushButton(self.widget)
+        self.pushButton_3 = QPushButton(self.layoutWidget)
         self.pushButton_3.setObjectName(u"pushButton_3")
 
         self.gridLayout.addWidget(self.pushButton_3, 1, 3, 1, 1)
@@ -111,23 +125,23 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.horizontalLayout_3.addLayout(self.gridLayout)
 
-        self.groupBox = QGroupBox(self.widget)
+        self.groupBox = QGroupBox(self.layoutWidget)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setFont(font)
-        self.widget1 = QWidget(self.groupBox)
-        self.widget1.setObjectName(u"widget1")
-        self.widget1.setGeometry(QRect(10, 30, 143, 60))
-        self.verticalLayout = QVBoxLayout(self.widget1)
+        self.layoutWidget1 = QWidget(self.groupBox)
+        self.layoutWidget1.setObjectName(u"layoutWidget1")
+        self.layoutWidget1.setGeometry(QRect(10, 30, 143, 60))
+        self.verticalLayout = QVBoxLayout(self.layoutWidget1)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.checkBox = QCheckBox(self.widget1)
+        self.checkBox = QCheckBox(self.layoutWidget1)
         self.checkBox.setObjectName(u"checkBox")
         self.checkBox.setMinimumSize(QSize(131, 21))
         self.checkBox.setFont(font)
 
         self.verticalLayout.addWidget(self.checkBox)
 
-        self.checkBox_2 = QCheckBox(self.widget1)
+        self.checkBox_2 = QCheckBox(self.layoutWidget1)
         self.checkBox_2.setObjectName(u"checkBox_2")
         self.checkBox_2.setMinimumSize(QSize(141, 22))
         self.checkBox_2.setFont(font)
@@ -137,26 +151,31 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.horizontalLayout_3.addWidget(self.groupBox)
 
-        self.widget2 = QWidget(self.DHC_Tab)
-        self.widget2.setObjectName(u"widget2")
-        self.widget2.setGeometry(QRect(30, 180, 621, 30))
-        self.horizontalLayout_4 = QHBoxLayout(self.widget2)
+        self.layoutWidget2 = QWidget(self.DHC_Tab)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.layoutWidget2.setGeometry(QRect(30, 180, 621, 30))
+        self.horizontalLayout_4 = QHBoxLayout(self.layoutWidget2)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.label_IntervalValue_3 = QLabel(self.widget2)
+        self.label_IntervalValue_3 = QLabel(self.layoutWidget2)
         self.label_IntervalValue_3.setObjectName(u"label_IntervalValue_3")
 
         self.horizontalLayout_4.addWidget(self.label_IntervalValue_3)
 
-        self.lineEdit = QLineEdit(self.widget2)
+        self.lineEdit = QLineEdit(self.layoutWidget2)
         self.lineEdit.setObjectName(u"lineEdit")
 
         self.horizontalLayout_4.addWidget(self.lineEdit)
 
-        self.comboBox_intervalUnit_2 = QComboBox(self.widget2)
+        self.comboBox_intervalUnit_2 = QComboBox(self.layoutWidget2)
         self.comboBox_intervalUnit_2.addItem(icon, "")
         self.comboBox_intervalUnit_2.addItem("")
         self.comboBox_intervalUnit_2.setObjectName(u"comboBox_intervalUnit_2")
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.comboBox_intervalUnit_2.sizePolicy().hasHeightForWidth())
+        self.comboBox_intervalUnit_2.setSizePolicy(sizePolicy2)
         self.comboBox_intervalUnit_2.setMinimumSize(QSize(91, 0))
         self.comboBox_intervalUnit_2.setFont(font)
 
@@ -171,20 +190,23 @@ class Ui_MainWindow_autoGen_T(object):
         self.MQTT_Tab.setObjectName(u"MQTT_Tab")
         self.AppTab.addTab(self.MQTT_Tab, "")
 
-        self.horizontalLayout.addWidget(self.AppTab)
+        self.gridLayout_2.addWidget(self.AppTab, 0, 0, 1, 1)
 
-        self.groupBox_terminalLike = QGroupBox(self.centralwidget)
+        self.groupBox_terminalLike = QGroupBox(self.widget)
         self.groupBox_terminalLike.setObjectName(u"groupBox_terminalLike")
-        sizePolicy.setHeightForWidth(self.groupBox_terminalLike.sizePolicy().hasHeightForWidth())
-        self.groupBox_terminalLike.setSizePolicy(sizePolicy)
-        self.groupBox_terminalLike.setMinimumSize(QSize(669, 562))
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(10)
+        sizePolicy3.setHeightForWidth(self.groupBox_terminalLike.sizePolicy().hasHeightForWidth())
+        self.groupBox_terminalLike.setSizePolicy(sizePolicy3)
+        self.groupBox_terminalLike.setMinimumSize(QSize(571, 700))
 
-        self.horizontalLayout.addWidget(self.groupBox_terminalLike)
+        self.gridLayout_2.addWidget(self.groupBox_terminalLike, 0, 1, 2, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1363, 21))
+        self.menubar.setGeometry(QRect(0, 0, 1274, 21))
         self.menuLazyApp = QMenu(self.menubar)
         self.menuLazyApp.setObjectName(u"menuLazyApp")
         self.menuEdit = QMenu(self.menubar)
@@ -206,7 +228,7 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.retranslateUi(MainWindow)
 
-        self.AppTab.setCurrentIndex(0)
+        self.AppTab.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

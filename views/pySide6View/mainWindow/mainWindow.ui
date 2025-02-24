@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1363</width>
-    <height>831</height>
+    <width>1274</width>
+    <height>755</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -20,302 +20,340 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QTabWidget" name="AppTab">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>670</width>
-        <height>562</height>
-       </size>
-      </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <widget class="QWidget" name="DHC_Tab">
-       <attribute name="title">
-        <string>DHC</string>
-       </attribute>
-       <widget class="QPushButton" name="pushButton">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>240</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>TSP pub</string>
-        </property>
-       </widget>
-       <widget class="QWidget" name="">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>30</y>
-          <width>621</width>
-          <height>121</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
-         <item>
-          <layout class="QGridLayout" name="gridLayout">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_intervalUnit">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Interval Unit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" colspan="2">
-            <widget class="QComboBox" name="comboBox_intervalUnit">
-             <property name="minimumSize">
-              <size>
-               <width>91</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="placeholderText">
-              <string/>
-             </property>
-             <item>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>1250</width>
+      <height>702</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="0">
+      <widget class="QFrame" name="frame_jsonEdit">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>671</width>
+         <height>361</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="AppTab">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>671</width>
+         <height>321</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <widget class="QWidget" name="DHC_Tab">
+        <attribute name="title">
+         <string>DHC</string>
+        </attribute>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>240</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>TSP pub</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>30</y>
+           <width>621</width>
+           <height>121</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_intervalUnit">
               <property name="text">
-               <string>Days</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Interval Unit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
-              <property name="icon">
-               <iconset theme="applications-utilities"/>
+             </widget>
+            </item>
+            <item row="0" column="1" colspan="2">
+             <widget class="QComboBox" name="comboBox_intervalUnit">
+              <property name="minimumSize">
+               <size>
+                <width>91</width>
+                <height>0</height>
+               </size>
               </property>
-             </item>
-             <item>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+              <item>
+               <property name="text">
+                <string>Days</string>
+               </property>
+               <property name="icon">
+                <iconset theme="applications-utilities"/>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Minutes</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QPushButton" name="pushButton_2">
               <property name="text">
-               <string>Minutes</string>
+               <string>Set</string>
               </property>
-             </item>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QPushButton" name="pushButton_2">
-             <property name="text">
-              <string>Set</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="2">
-            <widget class="QLabel" name="label_IntervalValue">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>97</width>
-               <height>29</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Interval Value&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="QSpinBox" name="spinBox_IntervalValue">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QPushButton" name="pushButton_3">
-             <property name="text">
-              <string>Set</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="QGroupBox" name="groupBox">
-           <property name="font">
-            <font>
-             <pointsize>11</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="title">
-            <string>Consent State</string>
-           </property>
-           <widget class="QWidget" name="">
-            <property name="geometry">
-             <rect>
-              <x>10</x>
-              <y>30</y>
-              <width>143</width>
-              <height>60</height>
-             </rect>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QLabel" name="label_IntervalValue">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>97</width>
+                <height>29</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Interval Value&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QSpinBox" name="spinBox_IntervalValue">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QPushButton" name="pushButton_3">
+              <property name="text">
+               <string>Set</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>true</bold>
+             </font>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout">
-             <item>
-              <widget class="QCheckBox" name="checkBox">
-               <property name="minimumSize">
-                <size>
-                 <width>131</width>
-                 <height>21</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>AllData</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="checkBox_2">
-               <property name="minimumSize">
-                <size>
-                 <width>141</width>
-                 <height>22</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>LocationData</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <property name="title">
+             <string>Consent State</string>
+            </property>
+            <widget class="QWidget" name="layoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>143</width>
+               <height>60</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QCheckBox" name="checkBox">
+                <property name="minimumSize">
+                 <size>
+                  <width>131</width>
+                  <height>21</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>AllData</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>141</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>LocationData</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </widget>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>180</y>
-          <width>621</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
-         <item>
-          <widget class="QLabel" name="label_IntervalValue_3">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;MQTT Topic&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="lineEdit"/>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox_intervalUnit_2">
-           <property name="minimumSize">
-            <size>
-             <width>91</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>11</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="placeholderText">
-            <string/>
-           </property>
-           <item>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>180</y>
+           <width>621</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_IntervalValue_3">
             <property name="text">
-             <string>MQTT/DHC</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;MQTT Topic&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
-            <property name="icon">
-             <iconset theme="applications-utilities"/>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_intervalUnit_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>MQTT/DHC/result</string>
+            <property name="minimumSize">
+             <size>
+              <width>91</width>
+              <height>0</height>
+             </size>
             </property>
-           </item>
-          </widget>
-         </item>
-        </layout>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+            <item>
+             <property name="text">
+              <string>MQTT/DHC</string>
+             </property>
+             <property name="icon">
+              <iconset theme="applications-utilities"/>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MQTT/DHC/result</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="VLS_Tab">
+        <attribute name="icon">
+         <iconset theme="address-book-new"/>
+        </attribute>
+        <attribute name="title">
+         <string>VLS</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="MQTT_Tab">
+        <attribute name="title">
+         <string>MQTT</string>
+        </attribute>
        </widget>
       </widget>
-      <widget class="QWidget" name="VLS_Tab">
-       <attribute name="icon">
-        <iconset theme="address-book-new"/>
-       </attribute>
-       <attribute name="title">
-        <string>VLS</string>
-       </attribute>
+     </item>
+     <item row="0" column="1" rowspan="2">
+      <widget class="QGroupBox" name="groupBox_terminalLike">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>10</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>571</width>
+         <height>700</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>Your memory saverious</string>
+       </property>
       </widget>
-      <widget class="QWidget" name="MQTT_Tab">
-       <attribute name="title">
-        <string>MQTT</string>
-       </attribute>
-      </widget>
-     </widget>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="groupBox_terminalLike">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>669</width>
-        <height>562</height>
-       </size>
-      </property>
-      <property name="title">
-       <string>Your memory saverious</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1363</width>
+     <width>1274</width>
      <height>21</height>
     </rect>
    </property>

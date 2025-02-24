@@ -1,163 +1,247 @@
-import json
-from PySide6.QtWidgets import QWidget, QVBoxLayout, QTextEdit, QMessageBox
-from PySide6.QtGui import QTextCharFormat, QColor, QFont, QSyntaxHighlighter, QTextCursor
-from PySide6.QtCore import Qt, QRegularExpression, QEvent
+import sys
+from PySide6.QtWidgets import (
+    QApplication,
+    QMainWindow,
+    QWidget,
+    QVBoxLayout,
+    QHBoxLayout,
+    QPushButton,
+    QLabel,
+    QLineEdit,
+    QTextEdit,
+    QMdiArea,
+    QMdiSubWindow,
+    QMessageBox,
+    QGraphicsView,
+    QGraphicsScene,
+    QComboBox,
+    QStyleFactory,
+)
+from PySide6.QtCore import Qt, QPointF
+from PySide6.QtGui import QWheelEvent, QPalette, QColor
 
 
-class JsonHighlighter(QSyntaxHighlighter):
-    """Syntax highlighter for JSON data."""
-    def __init__(self, parent=None):
+class ZoomableGraphicsView(QGraphicsView):
+    """A QGraphicsView that supports zooming with the mouse wheel."""
+
+    def __init__(self, scene, parent=None):
+        super().__init__(scene, parent)
+        self.setRenderHints(self.renderHints())  # Keep existing render hints
+        self.setOptimizationFlags(
+            self.optimizationFlags()
+        )  # Keep existing optimization flags
+        self.setTransformationAnchor(QGraphicsView.AnchorUnderMouse)  # Zoom in on the mouse
+        self.setResizeAnchor(QGraphicsView.AnchorUnderMouse)  # Keep same relative position on resize
+        self.zoom_factor = 1.0
+        self.zoom_step = 1.25  # 25% zoom increment
+
+    def wheelEvent(self, event: QWheelEvent):
+        """Handles mouse wheel events for zooming."""
+        delta = event.angleDelta().y()
+        if delta > 0:
+            self.zoom_in()
+        elif delta < 0:
+            self.zoom_out()
+        event.accept()
+
+    def zoom_in(self):
+        """Zooms in the view."""
+        self.zoom_factor *= self.zoom_step
+        self.scale(self.zoom_step, self.zoom_step)
+
+    def zoom_out(self):
+        """Zooms out the view."""
+        self.zoom_factor /= self.zoom_step
+        self.scale(1 / self.zoom_step, 1 / self.zoom_step)
+
+
+class SubWindow(QWidget):
+    """A simple reusable subwindow for our MDI area."""
+
+    def __init__(self, title, content_widget=None, parent=None):
         super().__init__(parent)
-        self.highlighting_rules = []
+        self.setWindowTitle(title)
 
-        # JSON keys
-        key_format = QTextCharFormat()
-        key_format.setForeground(QColor("#4EC9B0"))  # Light blue
-        self.highlighting_rules.append((QRegularExpression(r'"(\\"|[^"])*"\s*:'), key_format))
+        layout = QVBoxLayout()
+        self.label = QLabel(title)  # Use the title as a label (for demo)
+        layout.addWidget(self.label)
 
-        # JSON strings
-        string_format = QTextCharFormat()
-        string_format.setForeground(QColor("#CE9178"))  # Light orange
-        self.highlighting_rules.append((QRegularExpression(r'"(\\"|[^"])*"'), string_format))
+        if content_widget:
+            layout.addWidget(content_widget)
 
-        # JSON numbers
-        number_format = QTextCharFormat()
-        number_format.setForeground(QColor("#B5CEA8"))  # Light green
-        self.highlighting_rules.append((QRegularExpression(r'\b\d+\b'), number_format))
+        self.setLayout(layout)
 
-        # JSON keywords (true, false, null)
-        keyword_format = QTextCharFormat()
-        keyword_format.setForeground(QColor("#569CD6"))  # Blue
-        keywords = ["true", "false", "null"]
-        for word in keywords:
-            self.highlighting_rules.append((QRegularExpression(fr'\b{word}\b'), keyword_format))
-
-    def highlightBlock(self, text):
-        """Apply syntax highlighting to the current text block."""
-        for pattern, format in self.highlighting_rules:
-            match_iterator = pattern.globalMatch(text)
-            while match_iterator.hasNext():
-                match = match_iterator.next()
-                self.setFormat(match.capturedStart(), match.capturedLength(), format)
+    def closeEvent(self, event):
+        # Example: Confirmation dialog before closing
+        reply = QMessageBox.question(
+            self,
+            "Confirm Close",
+            "Are you sure you want to close this window?",
+            QMessageBox.Yes | QMessageBox.No,
+            QMessageBox.No,
+        )
+        if reply == QMessageBox.Yes:
+            event.accept()  # Allow the window to close
+        else:
+            event.ignore()  # Prevent the window from closing
 
 
-class JsonEditorWidget(QWidget):
-    """A widget for displaying and editing JSON data with syntax highlighting and zoom."""
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.init_ui()
+class MainWindow(QMainWindow):
+    """Main application window."""
 
-    def init_ui(self):
-        """Initialize the UI components."""
-        self.layout = QVBoxLayout(self)
-        self.layout.setContentsMargins(0, 0, 0, 0)
+    def __init__(self):
+        super().__init__()
 
-        # Text edit for JSON input
-        self.text_edit = QTextEdit()
-        self.text_edit.setFont(QFont("Courier New", 10))
-        self.text_edit.setStyleSheet("""
-            QTextEdit {
-                background-color: #1E1E1E;
-                color: #CCCCCC;
-                border: 1px solid #3F3F3F;
-            }
-        """)
-        self.layout.addWidget(self.text_edit)
+        self.setWindowTitle("MDI Area Example with Zoom and Theme")
+        self.setGeometry(100, 100, 800, 600)
 
-        # Syntax highlighter
-        self.highlighter = JsonHighlighter(self.text_edit.document())
+        # Create the MDI area
+        self.mdi_area = QMdiArea()
+        self.mdi_area.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.mdi_area.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.setCentralWidget(self.mdi_area)
 
-        # Enable zoom with Ctrl + Mouse Wheel
-        self.text_edit.setMouseTracking(True)
-        self.text_edit.viewport().installEventFilter(self)
+        # --- Theme Selection ---
+        self.theme_combo = QComboBox()
+        self.theme_combo.addItems(QStyleFactory.keys())  # Add available styles
+        self.theme_combo.currentTextChanged.connect(self.change_theme)
 
-    def eventFilter(self, obj, event):
-        """Handle mouse wheel events for zooming."""
-        if obj == self.text_edit.viewport() and event.type() == QEvent.Type.Wheel:
-            if event.modifiers() == Qt.ControlModifier:
-                self.zoom_text(event.angleDelta().y())
-                return True
-        return super().eventFilter(obj, event)
+        theme_label = QLabel("Select Theme:")
+        theme_layout = QHBoxLayout()
+        theme_layout.addWidget(theme_label)
+        theme_layout.addWidget(self.theme_combo)
+        theme_layout.addStretch()  # Push the theme selection to the left
 
-    def zoom_text(self, delta):
-        """Zoom in or out based on the mouse wheel delta."""
-        current_font = self.text_edit.font()
-        current_size = current_font.pointSize()
+        # --- Buttons ---
+        button_layout = QHBoxLayout()
 
-        if delta > 0:  # Zoom in
-            new_size = current_size + 1
-        else:  # Zoom out
-            new_size = max(6, current_size - 1)  # Minimum font size of 6
+        # Button to add a new subwindow
+        add_button = QPushButton("Add Subwindow")
+        add_button.clicked.connect(self.add_subwindow)
+        button_layout.addWidget(add_button)
 
-        current_font.setPointSize(new_size)
-        self.text_edit.setFont(current_font)
+        add_custom_button = QPushButton("Add Custom Subwindow")
+        add_custom_button.clicked.connect(self.add_custom_subwindow)
+        button_layout.addWidget(add_custom_button)
 
-    def set_json(self, data):
-        """Load JSON data into the editor."""
-        try:
-            formatted_json = json.dumps(data, indent=4)
-            self.text_edit.setPlainText(formatted_json)
-        except Exception as e:
-            self.show_error(f"Invalid JSON data: {e}")
+        add_textedit_button = QPushButton("Add TextEdit Subwindow")
+        add_textedit_button.clicked.connect(self.add_textedit_subwindow)
+        button_layout.addWidget(add_textedit_button)
 
-    def get_json(self):
-        """Retrieve and validate JSON data from the editor."""
-        try:
-            json_data = json.loads(self.text_edit.toPlainText())
-            return json_data
-        except json.JSONDecodeError as e:
-            self.show_error(f"Invalid JSON: {e}")
-            return None
+        add_zoomable_button = QPushButton("Add Zoomable Subwindow")
+        add_zoomable_button.clicked.connect(self.add_zoomable_subwindow)
+        button_layout.addWidget(add_zoomable_button)
 
-    def show_error(self, message):
-        """Display an error message."""
-        QMessageBox.critical(self, "Error", message)
+        # Button to tile subwindows
+        tile_button = QPushButton("Tile Subwindows")
+        tile_button.clicked.connect(self.mdi_area.tileSubWindows)
+        button_layout.addWidget(tile_button)
 
-    def validate_json(self):
-        """Check if the current content is valid JSON."""
-        try:
-            json.loads(self.text_edit.toPlainText())
-            return True
-        except json.JSONDecodeError:
-            return False
+        # Button to cascade subwindows
+        cascade_button = QPushButton("Cascade Subwindows")
+        cascade_button.clicked.connect(self.mdi_area.cascadeSubWindows)
+        button_layout.addWidget(cascade_button)
 
-    def clear(self):
-        """Clear the editor."""
-        self.text_edit.clear()
+        # Button to close all subwindows
+        close_all_button = QPushButton("Close All")
+        close_all_button.clicked.connect(self.close_all_subwindows)
+        button_layout.addWidget(close_all_button)
+
+        # --- Layout ---
+        main_layout = QVBoxLayout()
+        main_layout.addLayout(theme_layout)  # Add theme selection
+        main_layout.addLayout(button_layout)  # Add buttons
+        main_layout.addWidget(self.mdi_area)
+
+        central_widget = QWidget()
+        central_widget.setLayout(main_layout)
+        self.setCentralWidget(central_widget)
+
+        self.subwindow_count = 0
+
+    def change_theme(self, style_name):
+        """Changes the application's style."""
+        QApplication.setStyle(style_name)
+        # Force a style update on all widgets
+        self.updateStyle()
+
+    def updateStyle(self):
+        """Recursively updates the style of the window and all its children."""
+        self.style().polish(self)  # Update main window
+        for child in self.findChildren(QWidget):
+            self.style().polish(child)  # Update all children
+
+    def add_subwindow(self):
+        """Adds a simple subwindow."""
+        self.subwindow_count += 1
+        sub_window = QMdiSubWindow()
+        sub_window.setWidget(SubWindow(f"Subwindow {self.subwindow_count}"))
+        sub_window.setAttribute(Qt.WA_DeleteOnClose)
+        self.mdi_area.addSubWindow(sub_window)
+        sub_window.show()
+
+    def add_custom_subwindow(self):
+        """Adds a subwindow with custom content (QLineEdit)."""
+        self.subwindow_count += 1
+        line_edit = QLineEdit()
+        line_edit.setPlaceholderText("Enter text here...")
+        sub_window = QMdiSubWindow()
+        sub_window_content = SubWindow(
+            f"Custom Subwindow {self.subwindow_count}", content_widget=line_edit
+        )
+        sub_window.setWidget(sub_window_content)
+        sub_window.setAttribute(Qt.WA_DeleteOnClose)
+        self.mdi_area.addSubWindow(sub_window)
+        sub_window.show()
+
+    def add_textedit_subwindow(self):
+        """Adds a subwindow containing a QTextEdit."""
+        self.subwindow_count += 1
+        text_edit = QTextEdit()
+        text_edit.setPlaceholderText("Type your text here...")
+        sub_window = QMdiSubWindow()
+        sub_window_content = SubWindow(
+            f"TextEdit Subwindow {self.subwindow_count}", content_widget=text_edit
+        )
+        sub_window.setWidget(sub_window_content)
+        sub_window.setAttribute(Qt.WA_DeleteOnClose)
+        self.mdi_area.addSubWindow(sub_window)
+        sub_window.show()
+
+    def add_zoomable_subwindow(self):
+        """Adds a subwindow with a zoomable QGraphicsView."""
+        self.subwindow_count += 1
+
+        # Create a QGraphicsScene
+        scene = QGraphicsScene(self)
+        # Add some items to the scene (for demonstration)
+        scene.addRect(-50, -50, 100, 100, Qt.red)
+        scene.addEllipse(20, 20, 60, 80, Qt.blue)
+        scene.addLine(-20, -20, 80, 50, Qt.green)
+        text_item = scene.addText("Zoom Me!")
+        text_item.setPos(-30, 10)
+
+        # Create a ZoomableGraphicsView and set the scene
+        view = ZoomableGraphicsView(scene)
+        view.setDragMode(QGraphicsView.ScrollHandDrag)  # Enable Drag
+
+        # Create a QMdiSubWindow and set the view as its widget
+        sub_window = QMdiSubWindow()
+        sub_window.setWidget(view)
+        sub_window.setWindowTitle(f"Zoomable Subwindow {self.subwindow_count}")
+        sub_window.setAttribute(Qt.WA_DeleteOnClose)
+        self.mdi_area.addSubWindow(sub_window)
+
+        sub_window.show()
+        sub_window.resize(400, 300)  # Give it an initial size
+
+    def close_all_subwindows(self):
+        """Closes all subwindows in the MDI area."""
+        self.mdi_area.closeAllSubWindows()
 
 
-# Example Usage
 if __name__ == "__main__":
-    from PySide6.QtWidgets import QApplication
-
-    app = QApplication([])
-
-    # Sample JSON data
-    sample_data = {
-        "name": "John Doe",
-        "age": 30,
-        "is_student": False,
-        "address": {
-            "street": "123 Main St",
-            "city": "Anytown"
-        },
-        "hobbies": ["reading", "coding", "gaming"]
-    }
-
-    # Create and show the widget
-    editor = JsonEditorWidget()
-    editor.set_json(sample_data)
-    editor.resize(600, 400)
-    editor.show()
-
-    # Retrieve JSON data
-    def print_json():
-        json_data = editor.get_json()
-        if json_data:
-            print("Current JSON Data:", json_data)
-
-    # Simulate retrieving JSON after a delay
-    from PySide6.QtCore import QTimer
-    QTimer.singleShot(3000, print_json)
-
-    app.exec()
+    app = QApplication(sys.argv)
+    main_window = MainWindow()
+    main_window.show()
+    sys.exit(app.exec())
