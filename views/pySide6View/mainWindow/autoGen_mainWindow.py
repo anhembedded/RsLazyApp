@@ -26,12 +26,13 @@ class Ui_MainWindow_autoGen_T(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1274, 755)
+        MainWindow.resize(1291, 770)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
+        MainWindow.setMinimumSize(QSize(1291, 770))
         self.actionChangeVin = QAction(MainWindow)
         self.actionChangeVin.setObjectName(u"actionChangeVin")
         self.actionSetFlag = QAction(MainWindow)
@@ -206,7 +207,7 @@ class Ui_MainWindow_autoGen_T(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1274, 21))
+        self.menubar.setGeometry(QRect(0, 0, 1291, 21))
         self.menuLazyApp = QMenu(self.menubar)
         self.menuLazyApp.setObjectName(u"menuLazyApp")
         self.menuEdit = QMenu(self.menubar)
