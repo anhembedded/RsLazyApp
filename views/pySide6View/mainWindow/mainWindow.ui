@@ -26,7 +26,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>9</x>
@@ -58,6 +58,25 @@
        </property>
       </widget>
      </item>
+     <item row="0" column="1" rowspan="2">
+      <widget class="QGroupBox" name="groupBox_terminalLike">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>10</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>571</width>
+         <height>700</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>Your memory saverious</string>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0">
       <widget class="QTabWidget" name="AppTab">
        <property name="sizePolicy">
@@ -76,13 +95,13 @@
         <bool>true</bool>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="DHC_Tab">
         <attribute name="title">
          <string>DHC</string>
         </attribute>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pushButton_pubMqttDhc">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -147,7 +166,7 @@
              </widget>
             </item>
             <item row="0" column="3">
-             <widget class="QPushButton" name="pushButton_2">
+             <widget class="QPushButton" name="pushButton_setIntervalUnit">
               <property name="text">
                <string>Set</string>
               </property>
@@ -183,7 +202,7 @@
              </widget>
             </item>
             <item row="1" column="3">
-             <widget class="QPushButton" name="pushButton_3">
+             <widget class="QPushButton" name="pushButton_setIntervalValue">
               <property name="text">
                <string>Set</string>
               </property>
@@ -192,7 +211,7 @@
            </layout>
           </item>
           <item>
-           <widget class="QGroupBox" name="groupBox">
+           <widget class="QGroupBox" name="groupBox_consentState">
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -213,7 +232,7 @@
              </property>
              <layout class="QVBoxLayout" name="verticalLayout">
               <item>
-               <widget class="QCheckBox" name="checkBox">
+               <widget class="QCheckBox" name="checkBox_allData">
                 <property name="minimumSize">
                  <size>
                   <width>131</width>
@@ -232,7 +251,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QCheckBox" name="checkBox_2">
+               <widget class="QCheckBox" name="checkBox_locationData">
                 <property name="minimumSize">
                  <size>
                   <width>141</width>
@@ -267,17 +286,17 @@
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
-           <widget class="QLabel" name="label_IntervalValue_3">
+           <widget class="QLabel" name="label_dhcMqttTopic">
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;MQTT Topic&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit"/>
+           <widget class="QLineEdit" name="lineEdit_vinToppicDhc"/>
           </item>
           <item>
-           <widget class="QComboBox" name="comboBox_intervalUnit_2">
+           <widget class="QComboBox" name="comboBox_mqttTopicDhc">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -330,25 +349,194 @@
          <string>MQTT</string>
         </attribute>
        </widget>
-      </widget>
-     </item>
-     <item row="0" column="1" rowspan="2">
-      <widget class="QGroupBox" name="groupBox_terminalLike">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>10</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>571</width>
-         <height>700</height>
-        </size>
-       </property>
-       <property name="title">
-        <string>Your memory saverious</string>
-       </property>
+       <widget class="QWidget" name="Config_Tab">
+        <attribute name="title">
+         <string>Config</string>
+        </attribute>
+        <widget class="QCheckBox" name="checkBox_dhc">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>40</y>
+           <width>77</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>DHC</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_vls">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>80</y>
+           <width>77</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>VLS</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_rsn">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>120</y>
+           <width>77</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>RSN</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_sos">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>160</y>
+           <width>77</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>SOS</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_acn">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>190</y>
+           <width>77</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ACN</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_didFlag">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>230</y>
+           <width>113</width>
+           <height>24</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_did">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>230</y>
+           <width>49</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>DID FLag</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_setVin">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>60</y>
+           <width>80</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Set Vin</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_getVin">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>110</y>
+           <width>80</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Get Vin</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>110</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_getVin">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>181</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="midLineWidth">
+           <number>1</number>
+          </property>
+          <property name="text">
+           <string>DID FLag</string>
+          </property>
+          <property name="margin">
+           <number>1</number>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_setVin">
+         <property name="geometry">
+          <rect>
+           <x>390</x>
+           <y>60</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </widget>
       </widget>
      </item>
     </layout>
