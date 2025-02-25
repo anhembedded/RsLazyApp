@@ -43,8 +43,6 @@ class viewPySide_T(view_abstract_T):
         self.jsonEditor = JsonEditorWidget_T()
         layout = QVBoxLayout()
         layout.addWidget(self.terminalLike)
-        self.mainWindow.groupBox_terminalLike.setLayout(self.terminalLike.layout)
-        self.mainWindow.frame_jsonEdit.setLayout(self.jsonEditor.layout)
         self.jsonEditor.set_json(sample_data)
         self.mainWindow.show()
 
