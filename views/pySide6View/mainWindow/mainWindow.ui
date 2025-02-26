@@ -114,24 +114,6 @@
        <property name="viewMode">
         <enum>QMdiArea::ViewMode::SubWindowView</enum>
        </property>
-       <widget class="QWidget" name="subwindow_dhc">
-        <property name="windowTitle">
-         <string>DHC</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_2"/>
-       </widget>
-       <widget class="QWidget" name="subwindow_vls">
-        <property name="windowTitle">
-         <string>VLS</string>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_7"/>
-       </widget>
-       <widget class="QWidget" name="subwindow_config">
-        <property name="windowTitle">
-         <string>Config</string>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_4"/>
-       </widget>
       </widget>
       <widget class="QGroupBox" name="groupBox_terminalLike">
        <property name="sizePolicy">
