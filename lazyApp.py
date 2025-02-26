@@ -1,13 +1,9 @@
 from utility.log import Logger_T, logging
 from views.view_abstract import view_abstract_T
 from views.pySide6View.pySideView import viewPySide_T  # Import your corrected viewPySide_T
-from viewModels.viewModel_abstract import viewModel_abstract_T
-from viewModels.viewModel import viewModel_T
-from models.model_abstract import model_abstract_T
-from models.model import model_T
 import sys
 from PySide6.QtWidgets import QApplication
-from PySide6.QtCore import QThread
+
 
 class lazyAppUI_T:
     def __init__(self):
