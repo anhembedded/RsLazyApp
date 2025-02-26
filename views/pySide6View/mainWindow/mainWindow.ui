@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1418</width>
-    <height>777</height>
+    <width>1734</width>
+    <height>941</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -33,6 +33,69 @@
     </sizepolicy>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SizeConstraint::SetMinimumSize</enum>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pushButton_config">
+        <property name="text">
+         <string>Config</string>
+        </property>
+        <property name="icon">
+         <iconset theme="applications-development"/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_dhc">
+        <property name="text">
+         <string>DHC</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_vls">
+        <property name="text">
+         <string>VLS</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../resources/protection.png</normaloff>../../../resources/protection.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_cust">
+        <property name="text">
+         <string>Ecall Apps</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_tile">
+        <property name="text">
+         <string>Tile</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_cascade">
+        <property name="text">
+         <string>Cascade</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_closeAll">
+        <property name="text">
+         <string>CloseAll</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
     <item row="1" column="0">
      <widget class="QSplitter" name="splitter">
       <property name="orientation">
@@ -79,14 +142,14 @@
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_3">
                 <item>
-                 <widget class="QCheckBox" name="checkBox_allData">
+                 <widget class="QCheckBox" name="checkBox_dhcAllData">
                   <property name="text">
                    <string>AllData</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QCheckBox" name="checkBox_locationData">
+                 <widget class="QCheckBox" name="checkBox_dhclocationData">
                   <property name="text">
                    <string>LocationData</string>
                   </property>
@@ -169,7 +232,7 @@
                 <widget class="QLineEdit" name="lineEdit_dhcVin"/>
                </item>
                <item>
-                <widget class="QComboBox" name="comboBox">
+                <widget class="QComboBox" name="comboBox_dhcMqttTopic">
                  <item>
                   <property name="text">
                    <string>abc/app/DHC</string>
@@ -199,6 +262,155 @@
         <property name="windowTitle">
          <string>VLS</string>
         </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QTabWidget" name="tabWidget_2">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="main_vls">
+            <attribute name="title">
+             <string>Main</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="groupBox_3">
+               <property name="maximumSize">
+                <size>
+                 <width>327</width>
+                 <height>92</height>
+                </size>
+               </property>
+               <property name="title">
+                <string>Priority</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <widget class="QComboBox" name="comboBox_vlsPriority">
+                  <item>
+                   <property name="text">
+                    <string>EMERGENCY</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>NON_EMERGENCY</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="1" rowspan="2">
+              <widget class="QGroupBox" name="groupBox_4">
+               <property name="title">
+                <string>Interval</string>
+               </property>
+               <layout class="QFormLayout" name="formLayout_3">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_vlsIntervalUnit">
+                  <property name="text">
+                   <string>Unit</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QComboBox" name="comboBox_vlsIntervalUnit">
+                  <item>
+                   <property name="text">
+                    <string>Days</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Minnus</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="pushButton_vlsSetIntervalUnit">
+                  <property name="text">
+                   <string>Set</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_vlsIntervalValue">
+                  <property name="text">
+                   <string>Value</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QSpinBox" name="spinBox_vlsValue">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QPushButton" name="pushButton_vlsSetIntervalValue">
+                  <property name="text">
+                   <string>Set</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <widget class="QLabel" name="label_vlsVinMqttTopic">
+                 <property name="text">
+                  <string>MQTT topic</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_vlsVin"/>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_vlsMqttToppic">
+                 <item>
+                  <property name="text">
+                   <string>abc/app/Vls</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>app/vls/voice</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>app/vls/stop</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>abc/app/DHC/result</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="JsonPayload_vls">
+            <attribute name="title">
+             <string>jsonPayload</string>
+            </attribute>
+           </widget>
+          </widget>
+         </item>
+        </layout>
        </widget>
        <widget class="QWidget" name="subwindow_config">
         <property name="windowTitle">
@@ -213,101 +425,119 @@
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_2">
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout">
-               <item>
-                <widget class="QCheckBox" name="checkBox_flagDhc">
-                 <property name="font">
-                  <font>
-                   <pointsize>10</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>DHC</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="checkBox_flagAcn">
-                 <property name="font">
-                  <font>
-                   <pointsize>10</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>ACN</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="checkBox_flagRsn">
-                 <property name="font">
-                  <font>
-                   <pointsize>10</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>RSN</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="checkBox_flagVls">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>10</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>VLS</string>
-                 </property>
-                 <property name="shortcut">
-                  <string>Ctrl+1</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="checkBox_flagSos">
-                 <property name="font">
-                  <font>
-                   <pointsize>10</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>SOS</string>
-                 </property>
-                 <property name="icon">
-                  <iconset theme="dialog-warning"/>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="checkBox_flagTelematic">
-                 <property name="font">
-                  <font>
-                   <pointsize>10</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Telematic</string>
-                 </property>
-                 <property name="icon">
-                  <iconset theme="applications-internet"/>
-                 </property>
-                </widget>
-               </item>
-              </layout>
+              <widget class="QGroupBox" name="groupBox_5">
+               <property name="title">
+                <string>Set Flags</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                 <widget class="QCheckBox" name="checkBox_flagDhc">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>DHC</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_flagAcn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>ACN</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_flagRsn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>RSN</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_flagVls">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>VLS</string>
+                  </property>
+                  <property name="shortcut">
+                   <string>Ctrl+1</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_flagSos">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>SOS</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="dialog-warning"/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox">
+                  <property name="font">
+                   <font>
+                    <pointsize>11</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Cust active</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_flagTelematic">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Telematic</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="applications-internet"/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -366,78 +596,83 @@
             </layout>
            </item>
            <item>
-            <layout class="QFormLayout" name="formLayout">
-             <item row="0" column="0">
-              <widget class="QPushButton" name="pushButton_getVinId">
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>Get VinID</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QPushButton" name="pushButton_setVinId">
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>Set VinID</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit_setVinId">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLineEdit" name="lineEdit_getVinId">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="inputMask">
-                <string/>
-               </property>
-               <property name="maxLength">
-                <number>32767</number>
-               </property>
-               <property name="readOnly">
-                <bool>true</bool>
-               </property>
-               <property name="placeholderText">
-                <string>vinId get from board</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <widget class="QGroupBox" name="groupBox_6">
+             <property name="title">
+              <string>Vin ID</string>
+             </property>
+             <layout class="QFormLayout" name="formLayout">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pushButton_getVinId">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Get VinID</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pushButton_setVinId">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Set VinID</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="lineEdit_setVinId">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="lineEdit_getVinId">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="maxLength">
+                 <number>32767</number>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+                <property name="placeholderText">
+                 <string>vinId get from board</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </item>
           </layout>
          </item>
@@ -457,69 +692,6 @@
       </widget>
      </widget>
     </item>
-    <item row="0" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <property name="sizeConstraint">
-       <enum>QLayout::SizeConstraint::SetMinimumSize</enum>
-      </property>
-      <item>
-       <widget class="QPushButton" name="pushButton_config">
-        <property name="text">
-         <string>Config</string>
-        </property>
-        <property name="icon">
-         <iconset theme="applications-development"/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_dhc">
-        <property name="text">
-         <string>DHC</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_vls">
-        <property name="text">
-         <string>VLS</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../../../resources/protection.png</normaloff>../../../resources/protection.png</iconset>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_cust">
-        <property name="text">
-         <string>Ecall Apps</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_tile">
-        <property name="text">
-         <string>Tile</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_cascade">
-        <property name="text">
-         <string>Cascade</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_closeAll">
-        <property name="text">
-         <string>CloseAll</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -527,7 +699,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1418</width>
+     <width>1734</width>
      <height>33</height>
     </rect>
    </property>

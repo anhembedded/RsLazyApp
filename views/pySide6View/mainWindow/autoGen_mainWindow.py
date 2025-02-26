@@ -27,7 +27,7 @@ class Ui_MainWindow_autoGen_T(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1418, 777)
+        MainWindow.resize(1734, 941)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -48,6 +48,52 @@ class Ui_MainWindow_autoGen_T(object):
         self.centralwidget.setSizePolicy(sizePolicy)
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setSizeConstraint(QLayout.SizeConstraint.SetMinimumSize)
+        self.pushButton_config = QPushButton(self.centralwidget)
+        self.pushButton_config.setObjectName(u"pushButton_config")
+        icon = QIcon(QIcon.fromTheme(u"applications-development"))
+        self.pushButton_config.setIcon(icon)
+
+        self.horizontalLayout.addWidget(self.pushButton_config)
+
+        self.pushButton_dhc = QPushButton(self.centralwidget)
+        self.pushButton_dhc.setObjectName(u"pushButton_dhc")
+
+        self.horizontalLayout.addWidget(self.pushButton_dhc)
+
+        self.pushButton_vls = QPushButton(self.centralwidget)
+        self.pushButton_vls.setObjectName(u"pushButton_vls")
+        icon1 = QIcon()
+        icon1.addFile(u"../../../resources/protection.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.pushButton_vls.setIcon(icon1)
+
+        self.horizontalLayout.addWidget(self.pushButton_vls)
+
+        self.pushButton_cust = QPushButton(self.centralwidget)
+        self.pushButton_cust.setObjectName(u"pushButton_cust")
+
+        self.horizontalLayout.addWidget(self.pushButton_cust)
+
+        self.pushButton_tile = QPushButton(self.centralwidget)
+        self.pushButton_tile.setObjectName(u"pushButton_tile")
+
+        self.horizontalLayout.addWidget(self.pushButton_tile)
+
+        self.pushButton_cascade = QPushButton(self.centralwidget)
+        self.pushButton_cascade.setObjectName(u"pushButton_cascade")
+
+        self.horizontalLayout.addWidget(self.pushButton_cascade)
+
+        self.pushButton_closeAll = QPushButton(self.centralwidget)
+        self.pushButton_closeAll.setObjectName(u"pushButton_closeAll")
+
+        self.horizontalLayout.addWidget(self.pushButton_closeAll)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+
         self.splitter = QSplitter(self.centralwidget)
         self.splitter.setObjectName(u"splitter")
         self.splitter.setOrientation(Qt.Orientation.Horizontal)
@@ -71,15 +117,15 @@ class Ui_MainWindow_autoGen_T(object):
         self.groupBox.setMaximumSize(QSize(327, 92))
         self.verticalLayout_3 = QVBoxLayout(self.groupBox)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.checkBox_allData = QCheckBox(self.groupBox)
-        self.checkBox_allData.setObjectName(u"checkBox_allData")
+        self.checkBox_dhcAllData = QCheckBox(self.groupBox)
+        self.checkBox_dhcAllData.setObjectName(u"checkBox_dhcAllData")
 
-        self.verticalLayout_3.addWidget(self.checkBox_allData)
+        self.verticalLayout_3.addWidget(self.checkBox_dhcAllData)
 
-        self.checkBox_locationData = QCheckBox(self.groupBox)
-        self.checkBox_locationData.setObjectName(u"checkBox_locationData")
+        self.checkBox_dhclocationData = QCheckBox(self.groupBox)
+        self.checkBox_dhclocationData.setObjectName(u"checkBox_dhclocationData")
 
-        self.verticalLayout_3.addWidget(self.checkBox_locationData)
+        self.verticalLayout_3.addWidget(self.checkBox_dhclocationData)
 
 
         self.gridLayout_3.addWidget(self.groupBox, 0, 0, 1, 1)
@@ -140,12 +186,12 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.horizontalLayout_5.addWidget(self.lineEdit_dhcVin)
 
-        self.comboBox = QComboBox(self.main)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox_dhcMqttTopic = QComboBox(self.main)
+        self.comboBox_dhcMqttTopic.addItem("")
+        self.comboBox_dhcMqttTopic.addItem("")
+        self.comboBox_dhcMqttTopic.setObjectName(u"comboBox_dhcMqttTopic")
 
-        self.horizontalLayout_5.addWidget(self.comboBox)
+        self.horizontalLayout_5.addWidget(self.comboBox_dhcMqttTopic)
 
 
         self.gridLayout_3.addLayout(self.horizontalLayout_5, 1, 0, 1, 1)
@@ -160,6 +206,101 @@ class Ui_MainWindow_autoGen_T(object):
         self.mdiArea_app.addSubWindow(self.subwindow_dhc)
         self.subwindow_vls = QWidget()
         self.subwindow_vls.setObjectName(u"subwindow_vls")
+        self.horizontalLayout_7 = QHBoxLayout(self.subwindow_vls)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.tabWidget_2 = QTabWidget(self.subwindow_vls)
+        self.tabWidget_2.setObjectName(u"tabWidget_2")
+        self.main_vls = QWidget()
+        self.main_vls.setObjectName(u"main_vls")
+        self.gridLayout_4 = QGridLayout(self.main_vls)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.groupBox_3 = QGroupBox(self.main_vls)
+        self.groupBox_3.setObjectName(u"groupBox_3")
+        self.groupBox_3.setMaximumSize(QSize(327, 92))
+        self.verticalLayout_4 = QVBoxLayout(self.groupBox_3)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.comboBox_vlsPriority = QComboBox(self.groupBox_3)
+        self.comboBox_vlsPriority.addItem("")
+        self.comboBox_vlsPriority.addItem("")
+        self.comboBox_vlsPriority.setObjectName(u"comboBox_vlsPriority")
+
+        self.verticalLayout_4.addWidget(self.comboBox_vlsPriority)
+
+
+        self.gridLayout_4.addWidget(self.groupBox_3, 0, 0, 1, 1)
+
+        self.groupBox_4 = QGroupBox(self.main_vls)
+        self.groupBox_4.setObjectName(u"groupBox_4")
+        self.formLayout_3 = QFormLayout(self.groupBox_4)
+        self.formLayout_3.setObjectName(u"formLayout_3")
+        self.label_vlsIntervalUnit = QLabel(self.groupBox_4)
+        self.label_vlsIntervalUnit.setObjectName(u"label_vlsIntervalUnit")
+
+        self.formLayout_3.setWidget(0, QFormLayout.LabelRole, self.label_vlsIntervalUnit)
+
+        self.comboBox_vlsIntervalUnit = QComboBox(self.groupBox_4)
+        self.comboBox_vlsIntervalUnit.addItem("")
+        self.comboBox_vlsIntervalUnit.addItem("")
+        self.comboBox_vlsIntervalUnit.setObjectName(u"comboBox_vlsIntervalUnit")
+
+        self.formLayout_3.setWidget(0, QFormLayout.FieldRole, self.comboBox_vlsIntervalUnit)
+
+        self.pushButton_vlsSetIntervalUnit = QPushButton(self.groupBox_4)
+        self.pushButton_vlsSetIntervalUnit.setObjectName(u"pushButton_vlsSetIntervalUnit")
+
+        self.formLayout_3.setWidget(2, QFormLayout.FieldRole, self.pushButton_vlsSetIntervalUnit)
+
+        self.label_vlsIntervalValue = QLabel(self.groupBox_4)
+        self.label_vlsIntervalValue.setObjectName(u"label_vlsIntervalValue")
+
+        self.formLayout_3.setWidget(3, QFormLayout.LabelRole, self.label_vlsIntervalValue)
+
+        self.spinBox_vlsValue = QSpinBox(self.groupBox_4)
+        self.spinBox_vlsValue.setObjectName(u"spinBox_vlsValue")
+        sizePolicy1.setHeightForWidth(self.spinBox_vlsValue.sizePolicy().hasHeightForWidth())
+        self.spinBox_vlsValue.setSizePolicy(sizePolicy1)
+
+        self.formLayout_3.setWidget(3, QFormLayout.FieldRole, self.spinBox_vlsValue)
+
+        self.pushButton_vlsSetIntervalValue = QPushButton(self.groupBox_4)
+        self.pushButton_vlsSetIntervalValue.setObjectName(u"pushButton_vlsSetIntervalValue")
+
+        self.formLayout_3.setWidget(4, QFormLayout.FieldRole, self.pushButton_vlsSetIntervalValue)
+
+
+        self.gridLayout_4.addWidget(self.groupBox_4, 0, 1, 2, 1)
+
+        self.horizontalLayout_6 = QHBoxLayout()
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.label_vlsVinMqttTopic = QLabel(self.main_vls)
+        self.label_vlsVinMqttTopic.setObjectName(u"label_vlsVinMqttTopic")
+
+        self.horizontalLayout_6.addWidget(self.label_vlsVinMqttTopic)
+
+        self.lineEdit_vlsVin = QLineEdit(self.main_vls)
+        self.lineEdit_vlsVin.setObjectName(u"lineEdit_vlsVin")
+
+        self.horizontalLayout_6.addWidget(self.lineEdit_vlsVin)
+
+        self.comboBox_vlsMqttToppic = QComboBox(self.main_vls)
+        self.comboBox_vlsMqttToppic.addItem("")
+        self.comboBox_vlsMqttToppic.addItem("")
+        self.comboBox_vlsMqttToppic.addItem("")
+        self.comboBox_vlsMqttToppic.addItem("")
+        self.comboBox_vlsMqttToppic.setObjectName(u"comboBox_vlsMqttToppic")
+
+        self.horizontalLayout_6.addWidget(self.comboBox_vlsMqttToppic)
+
+
+        self.gridLayout_4.addLayout(self.horizontalLayout_6, 1, 0, 1, 1)
+
+        self.tabWidget_2.addTab(self.main_vls, "")
+        self.JsonPayload_vls = QWidget()
+        self.JsonPayload_vls.setObjectName(u"JsonPayload_vls")
+        self.tabWidget_2.addTab(self.JsonPayload_vls, "")
+
+        self.horizontalLayout_7.addWidget(self.tabWidget_2)
+
         self.mdiArea_app.addSubWindow(self.subwindow_vls)
         self.subwindow_config = QWidget()
         self.subwindow_config.setObjectName(u"subwindow_config")
@@ -170,9 +311,11 @@ class Ui_MainWindow_autoGen_T(object):
         self.horizontalLayout_3.setSizeConstraint(QLayout.SizeConstraint.SetMinAndMaxSize)
         self.verticalLayout_2 = QVBoxLayout()
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout = QVBoxLayout()
+        self.groupBox_5 = QGroupBox(self.subwindow_config)
+        self.groupBox_5.setObjectName(u"groupBox_5")
+        self.verticalLayout = QVBoxLayout(self.groupBox_5)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.checkBox_flagDhc = QCheckBox(self.subwindow_config)
+        self.checkBox_flagDhc = QCheckBox(self.groupBox_5)
         self.checkBox_flagDhc.setObjectName(u"checkBox_flagDhc")
         font = QFont()
         font.setPointSize(10)
@@ -181,19 +324,19 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.verticalLayout.addWidget(self.checkBox_flagDhc)
 
-        self.checkBox_flagAcn = QCheckBox(self.subwindow_config)
+        self.checkBox_flagAcn = QCheckBox(self.groupBox_5)
         self.checkBox_flagAcn.setObjectName(u"checkBox_flagAcn")
         self.checkBox_flagAcn.setFont(font)
 
         self.verticalLayout.addWidget(self.checkBox_flagAcn)
 
-        self.checkBox_flagRsn = QCheckBox(self.subwindow_config)
+        self.checkBox_flagRsn = QCheckBox(self.groupBox_5)
         self.checkBox_flagRsn.setObjectName(u"checkBox_flagRsn")
         self.checkBox_flagRsn.setFont(font)
 
         self.verticalLayout.addWidget(self.checkBox_flagRsn)
 
-        self.checkBox_flagVls = QCheckBox(self.subwindow_config)
+        self.checkBox_flagVls = QCheckBox(self.groupBox_5)
         self.checkBox_flagVls.setObjectName(u"checkBox_flagVls")
         sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
         sizePolicy2.setHorizontalStretch(0)
@@ -204,24 +347,33 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.verticalLayout.addWidget(self.checkBox_flagVls)
 
-        self.checkBox_flagSos = QCheckBox(self.subwindow_config)
+        self.checkBox_flagSos = QCheckBox(self.groupBox_5)
         self.checkBox_flagSos.setObjectName(u"checkBox_flagSos")
         self.checkBox_flagSos.setFont(font)
-        icon = QIcon(QIcon.fromTheme(u"dialog-warning"))
-        self.checkBox_flagSos.setIcon(icon)
+        icon2 = QIcon(QIcon.fromTheme(u"dialog-warning"))
+        self.checkBox_flagSos.setIcon(icon2)
 
         self.verticalLayout.addWidget(self.checkBox_flagSos)
 
-        self.checkBox_flagTelematic = QCheckBox(self.subwindow_config)
+        self.checkBox = QCheckBox(self.groupBox_5)
+        self.checkBox.setObjectName(u"checkBox")
+        font1 = QFont()
+        font1.setPointSize(11)
+        font1.setBold(True)
+        self.checkBox.setFont(font1)
+
+        self.verticalLayout.addWidget(self.checkBox)
+
+        self.checkBox_flagTelematic = QCheckBox(self.groupBox_5)
         self.checkBox_flagTelematic.setObjectName(u"checkBox_flagTelematic")
         self.checkBox_flagTelematic.setFont(font)
-        icon1 = QIcon(QIcon.fromTheme(u"applications-internet"))
-        self.checkBox_flagTelematic.setIcon(icon1)
+        icon3 = QIcon(QIcon.fromTheme(u"applications-internet"))
+        self.checkBox_flagTelematic.setIcon(icon3)
 
         self.verticalLayout.addWidget(self.checkBox_flagTelematic)
 
 
-        self.verticalLayout_2.addLayout(self.verticalLayout)
+        self.verticalLayout_2.addWidget(self.groupBox_5)
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -244,10 +396,10 @@ class Ui_MainWindow_autoGen_T(object):
         sizePolicy4.setHeightForWidth(self.lineEdit_didValue.sizePolicy().hasHeightForWidth())
         self.lineEdit_didValue.setSizePolicy(sizePolicy4)
         self.lineEdit_didValue.setMaximumSize(QSize(85, 16777215))
-        font1 = QFont()
-        font1.setPointSize(12)
-        font1.setBold(True)
-        self.lineEdit_didValue.setFont(font1)
+        font2 = QFont()
+        font2.setPointSize(12)
+        font2.setBold(True)
+        self.lineEdit_didValue.setFont(font2)
         self.lineEdit_didValue.setCursor(QCursor(Qt.CursorShape.IBeamCursor))
 
         self.horizontalLayout_2.addWidget(self.lineEdit_didValue)
@@ -258,21 +410,23 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.horizontalLayout_3.addLayout(self.verticalLayout_2)
 
-        self.formLayout = QFormLayout()
+        self.groupBox_6 = QGroupBox(self.subwindow_config)
+        self.groupBox_6.setObjectName(u"groupBox_6")
+        self.formLayout = QFormLayout(self.groupBox_6)
         self.formLayout.setObjectName(u"formLayout")
-        self.pushButton_getVinId = QPushButton(self.subwindow_config)
+        self.pushButton_getVinId = QPushButton(self.groupBox_6)
         self.pushButton_getVinId.setObjectName(u"pushButton_getVinId")
         self.pushButton_getVinId.setFont(font)
 
         self.formLayout.setWidget(0, QFormLayout.LabelRole, self.pushButton_getVinId)
 
-        self.pushButton_setVinId = QPushButton(self.subwindow_config)
+        self.pushButton_setVinId = QPushButton(self.groupBox_6)
         self.pushButton_setVinId.setObjectName(u"pushButton_setVinId")
         self.pushButton_setVinId.setFont(font)
 
         self.formLayout.setWidget(1, QFormLayout.LabelRole, self.pushButton_setVinId)
 
-        self.lineEdit_setVinId = QLineEdit(self.subwindow_config)
+        self.lineEdit_setVinId = QLineEdit(self.groupBox_6)
         self.lineEdit_setVinId.setObjectName(u"lineEdit_setVinId")
         sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
         sizePolicy5.setHorizontalStretch(0)
@@ -283,7 +437,7 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.formLayout.setWidget(1, QFormLayout.FieldRole, self.lineEdit_setVinId)
 
-        self.lineEdit_getVinId = QLineEdit(self.subwindow_config)
+        self.lineEdit_getVinId = QLineEdit(self.groupBox_6)
         self.lineEdit_getVinId.setObjectName(u"lineEdit_getVinId")
         sizePolicy5.setHeightForWidth(self.lineEdit_getVinId.sizePolicy().hasHeightForWidth())
         self.lineEdit_getVinId.setSizePolicy(sizePolicy5)
@@ -294,7 +448,7 @@ class Ui_MainWindow_autoGen_T(object):
         self.formLayout.setWidget(0, QFormLayout.FieldRole, self.lineEdit_getVinId)
 
 
-        self.horizontalLayout_3.addLayout(self.formLayout)
+        self.horizontalLayout_3.addWidget(self.groupBox_6)
 
 
         self.horizontalLayout_4.addLayout(self.horizontalLayout_3)
@@ -312,56 +466,10 @@ class Ui_MainWindow_autoGen_T(object):
 
         self.gridLayout.addWidget(self.splitter, 1, 0, 1, 1)
 
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalLayout.setSizeConstraint(QLayout.SizeConstraint.SetMinimumSize)
-        self.pushButton_config = QPushButton(self.centralwidget)
-        self.pushButton_config.setObjectName(u"pushButton_config")
-        icon2 = QIcon(QIcon.fromTheme(u"applications-development"))
-        self.pushButton_config.setIcon(icon2)
-
-        self.horizontalLayout.addWidget(self.pushButton_config)
-
-        self.pushButton_dhc = QPushButton(self.centralwidget)
-        self.pushButton_dhc.setObjectName(u"pushButton_dhc")
-
-        self.horizontalLayout.addWidget(self.pushButton_dhc)
-
-        self.pushButton_vls = QPushButton(self.centralwidget)
-        self.pushButton_vls.setObjectName(u"pushButton_vls")
-        icon3 = QIcon()
-        icon3.addFile(u"../../../resources/protection.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.pushButton_vls.setIcon(icon3)
-
-        self.horizontalLayout.addWidget(self.pushButton_vls)
-
-        self.pushButton_cust = QPushButton(self.centralwidget)
-        self.pushButton_cust.setObjectName(u"pushButton_cust")
-
-        self.horizontalLayout.addWidget(self.pushButton_cust)
-
-        self.pushButton_tile = QPushButton(self.centralwidget)
-        self.pushButton_tile.setObjectName(u"pushButton_tile")
-
-        self.horizontalLayout.addWidget(self.pushButton_tile)
-
-        self.pushButton_cascade = QPushButton(self.centralwidget)
-        self.pushButton_cascade.setObjectName(u"pushButton_cascade")
-
-        self.horizontalLayout.addWidget(self.pushButton_cascade)
-
-        self.pushButton_closeAll = QPushButton(self.centralwidget)
-        self.pushButton_closeAll.setObjectName(u"pushButton_closeAll")
-
-        self.horizontalLayout.addWidget(self.pushButton_closeAll)
-
-
-        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
-
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1418, 33))
+        self.menubar.setGeometry(QRect(0, 0, 1734, 33))
         self.menuLazyApp = QMenu(self.menubar)
         self.menuLazyApp.setObjectName(u"menuLazyApp")
         self.menuEdit = QMenu(self.menubar)
@@ -387,6 +495,7 @@ class Ui_MainWindow_autoGen_T(object):
         self.pushButton_cascade.clicked.connect(self.mdiArea_app.cascadeSubWindows)
 
         self.tabWidget.setCurrentIndex(0)
+        self.tabWidget_2.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -398,10 +507,17 @@ class Ui_MainWindow_autoGen_T(object):
         self.actionSetFlag.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"SetFlag", None))
         self.actionTheme.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Theme", None))
         self.actionAnhTh49.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"AnhTh49", None))
+        self.pushButton_config.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Config", None))
+        self.pushButton_dhc.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"DHC", None))
+        self.pushButton_vls.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"VLS", None))
+        self.pushButton_cust.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Ecall Apps", None))
+        self.pushButton_tile.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Tile", None))
+        self.pushButton_cascade.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Cascade", None))
+        self.pushButton_closeAll.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"CloseAll", None))
         self.subwindow_dhc.setWindowTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"DHC", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Consent State", None))
-        self.checkBox_allData.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"AllData", None))
-        self.checkBox_locationData.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"LocationData", None))
+        self.checkBox_dhcAllData.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"AllData", None))
+        self.checkBox_dhclocationData.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"LocationData", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Interval", None))
         self.label_dhcIntervalUnit.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Unit", None))
         self.comboBox_dhcIntervalUnit.setItemText(0, QCoreApplication.translate("MainWindow_autoGen_T", u"Days", None))
@@ -411,13 +527,34 @@ class Ui_MainWindow_autoGen_T(object):
         self.label_dhcIntervalValue.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Value", None))
         self.pushButton_dhcSetIntervalValue.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Set", None))
         self.label_dhcMqttTopic.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"MQTT topic", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow_autoGen_T", u"abc/app/DHC", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow_autoGen_T", u"abc/app/DHC/result", None))
+        self.comboBox_dhcMqttTopic.setItemText(0, QCoreApplication.translate("MainWindow_autoGen_T", u"abc/app/DHC", None))
+        self.comboBox_dhcMqttTopic.setItemText(1, QCoreApplication.translate("MainWindow_autoGen_T", u"abc/app/DHC/result", None))
 
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.main), QCoreApplication.translate("MainWindow_autoGen_T", u"Main", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.JsonPayload), QCoreApplication.translate("MainWindow_autoGen_T", u"jsonPayload", None))
         self.subwindow_vls.setWindowTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"VLS", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Priority", None))
+        self.comboBox_vlsPriority.setItemText(0, QCoreApplication.translate("MainWindow_autoGen_T", u"EMERGENCY", None))
+        self.comboBox_vlsPriority.setItemText(1, QCoreApplication.translate("MainWindow_autoGen_T", u"NON_EMERGENCY", None))
+
+        self.groupBox_4.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Interval", None))
+        self.label_vlsIntervalUnit.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Unit", None))
+        self.comboBox_vlsIntervalUnit.setItemText(0, QCoreApplication.translate("MainWindow_autoGen_T", u"Days", None))
+        self.comboBox_vlsIntervalUnit.setItemText(1, QCoreApplication.translate("MainWindow_autoGen_T", u"Minnus", None))
+
+        self.pushButton_vlsSetIntervalUnit.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Set", None))
+        self.label_vlsIntervalValue.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Value", None))
+        self.pushButton_vlsSetIntervalValue.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Set", None))
+        self.label_vlsVinMqttTopic.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"MQTT topic", None))
+        self.comboBox_vlsMqttToppic.setItemText(0, QCoreApplication.translate("MainWindow_autoGen_T", u"abc/app/Vls", None))
+        self.comboBox_vlsMqttToppic.setItemText(1, QCoreApplication.translate("MainWindow_autoGen_T", u"app/vls/voice", None))
+        self.comboBox_vlsMqttToppic.setItemText(2, QCoreApplication.translate("MainWindow_autoGen_T", u"app/vls/stop", None))
+        self.comboBox_vlsMqttToppic.setItemText(3, QCoreApplication.translate("MainWindow_autoGen_T", u"abc/app/DHC/result", None))
+
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.main_vls), QCoreApplication.translate("MainWindow_autoGen_T", u"Main", None))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.JsonPayload_vls), QCoreApplication.translate("MainWindow_autoGen_T", u"jsonPayload", None))
         self.subwindow_config.setWindowTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Config", None))
+        self.groupBox_5.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Set Flags", None))
         self.checkBox_flagDhc.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"DHC", None))
         self.checkBox_flagAcn.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"ACN", None))
         self.checkBox_flagRsn.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"RSN", None))
@@ -426,22 +563,17 @@ class Ui_MainWindow_autoGen_T(object):
         self.checkBox_flagVls.setShortcut(QCoreApplication.translate("MainWindow_autoGen_T", u"Ctrl+1", None))
 #endif // QT_CONFIG(shortcut)
         self.checkBox_flagSos.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"SOS", None))
+        self.checkBox.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Cust active", None))
         self.checkBox_flagTelematic.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Telematic", None))
         self.label_didValue.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"DID value", None))
         self.lineEdit_didValue.setText("")
         self.lineEdit_didValue.setPlaceholderText(QCoreApplication.translate("MainWindow_autoGen_T", u"0x00", None))
+        self.groupBox_6.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Vin ID", None))
         self.pushButton_getVinId.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Get VinID", None))
         self.pushButton_setVinId.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Set VinID", None))
         self.lineEdit_getVinId.setInputMask("")
         self.lineEdit_getVinId.setPlaceholderText(QCoreApplication.translate("MainWindow_autoGen_T", u"vinId get from board", None))
         self.groupBox_terminalLike.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Terminal Like", None))
-        self.pushButton_config.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Config", None))
-        self.pushButton_dhc.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"DHC", None))
-        self.pushButton_vls.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"VLS", None))
-        self.pushButton_cust.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Ecall Apps", None))
-        self.pushButton_tile.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Tile", None))
-        self.pushButton_cascade.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"Cascade", None))
-        self.pushButton_closeAll.setText(QCoreApplication.translate("MainWindow_autoGen_T", u"CloseAll", None))
         self.menuLazyApp.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"LazyApp", None))
         self.menuEdit.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Edit", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow_autoGen_T", u"Help", None))
