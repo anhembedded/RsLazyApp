@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'vls.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.2
+## Created by: Qt User Interface Compiler version 6.10.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -81,24 +81,24 @@ class Ui_vls_autoGen_T(object):
         self.label_vlsIntervalUnit = QLabel(self.groupBox_4)
         self.label_vlsIntervalUnit.setObjectName(u"label_vlsIntervalUnit")
 
-        self.formLayout_3.setWidget(0, QFormLayout.LabelRole, self.label_vlsIntervalUnit)
+        self.formLayout_3.setWidget(0, QFormLayout.ItemRole.LabelRole, self.label_vlsIntervalUnit)
 
         self.comboBox_vlsIntervalUnit = QComboBox(self.groupBox_4)
         self.comboBox_vlsIntervalUnit.addItem("")
         self.comboBox_vlsIntervalUnit.addItem("")
         self.comboBox_vlsIntervalUnit.setObjectName(u"comboBox_vlsIntervalUnit")
 
-        self.formLayout_3.setWidget(0, QFormLayout.FieldRole, self.comboBox_vlsIntervalUnit)
+        self.formLayout_3.setWidget(0, QFormLayout.ItemRole.FieldRole, self.comboBox_vlsIntervalUnit)
 
         self.pushButton_vlsSetIntervalUnit = QPushButton(self.groupBox_4)
         self.pushButton_vlsSetIntervalUnit.setObjectName(u"pushButton_vlsSetIntervalUnit")
 
-        self.formLayout_3.setWidget(2, QFormLayout.FieldRole, self.pushButton_vlsSetIntervalUnit)
+        self.formLayout_3.setWidget(2, QFormLayout.ItemRole.FieldRole, self.pushButton_vlsSetIntervalUnit)
 
         self.label_vlsIntervalValue = QLabel(self.groupBox_4)
         self.label_vlsIntervalValue.setObjectName(u"label_vlsIntervalValue")
 
-        self.formLayout_3.setWidget(3, QFormLayout.LabelRole, self.label_vlsIntervalValue)
+        self.formLayout_3.setWidget(3, QFormLayout.ItemRole.LabelRole, self.label_vlsIntervalValue)
 
         self.spinBox_vlsValue = QSpinBox(self.groupBox_4)
         self.spinBox_vlsValue.setObjectName(u"spinBox_vlsValue")
@@ -108,12 +108,12 @@ class Ui_vls_autoGen_T(object):
         sizePolicy.setHeightForWidth(self.spinBox_vlsValue.sizePolicy().hasHeightForWidth())
         self.spinBox_vlsValue.setSizePolicy(sizePolicy)
 
-        self.formLayout_3.setWidget(3, QFormLayout.FieldRole, self.spinBox_vlsValue)
+        self.formLayout_3.setWidget(3, QFormLayout.ItemRole.FieldRole, self.spinBox_vlsValue)
 
         self.pushButton_vlsSetIntervalValue = QPushButton(self.groupBox_4)
         self.pushButton_vlsSetIntervalValue.setObjectName(u"pushButton_vlsSetIntervalValue")
 
-        self.formLayout_3.setWidget(4, QFormLayout.FieldRole, self.pushButton_vlsSetIntervalValue)
+        self.formLayout_3.setWidget(4, QFormLayout.ItemRole.FieldRole, self.pushButton_vlsSetIntervalValue)
 
 
         self.gridLayout_4.addWidget(self.groupBox_4, 0, 1, 2, 1)

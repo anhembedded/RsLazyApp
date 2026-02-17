@@ -13,9 +13,10 @@ from PySide6.QtWidgets import (
 )
 
 class mainWindow_T(QMainWindow,Ui_MainWindow_autoGen_T):
-    def __init__(self):
+    def __init__(self, viewModel=None):
         super().__init__()
         self.setupUi(self)
+        self.viewModel = viewModel
 
         self.terminalLike = TerminalWidget_T()
         self.jsonEditor = JsonEditorWidget_T()
@@ -28,3 +29,9 @@ class mainWindow_T(QMainWindow,Ui_MainWindow_autoGen_T):
         self.mdiArea_app.addSubWindow(self.dhcWidget).setWindowTitle("DHC")
         self.mdiArea_app.addSubWindow(self.vlsWidget).setWindowTitle("VLS")
         self.groupBox_terminalLike.setLayout(self.terminalLike.layout())
+
+    def closeEvent(self, event):
+        """Handle cleanup when the main window is closed."""
+        if self.viewModel:
+            self.viewModel.cleanup()
+        super().closeEvent(event)

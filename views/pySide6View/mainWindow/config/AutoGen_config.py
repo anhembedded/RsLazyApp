@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'config.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.2
+## Created by: Qt User Interface Compiler version 6.10.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -135,13 +135,13 @@ class Ui_configWidget_autoGen_T(object):
         self.pushButton_getVinId.setObjectName(u"pushButton_getVinId")
         self.pushButton_getVinId.setFont(font)
 
-        self.formLayout.setWidget(0, QFormLayout.LabelRole, self.pushButton_getVinId)
+        self.formLayout.setWidget(0, QFormLayout.ItemRole.LabelRole, self.pushButton_getVinId)
 
         self.pushButton_setVinId = QPushButton(self.groupBox_6)
         self.pushButton_setVinId.setObjectName(u"pushButton_setVinId")
         self.pushButton_setVinId.setFont(font)
 
-        self.formLayout.setWidget(1, QFormLayout.LabelRole, self.pushButton_setVinId)
+        self.formLayout.setWidget(1, QFormLayout.ItemRole.LabelRole, self.pushButton_setVinId)
 
         self.lineEdit_setVinId = QLineEdit(self.groupBox_6)
         self.lineEdit_setVinId.setObjectName(u"lineEdit_setVinId")
@@ -152,7 +152,7 @@ class Ui_configWidget_autoGen_T(object):
         self.lineEdit_setVinId.setSizePolicy(sizePolicy3)
         self.lineEdit_setVinId.setFont(font)
 
-        self.formLayout.setWidget(1, QFormLayout.FieldRole, self.lineEdit_setVinId)
+        self.formLayout.setWidget(1, QFormLayout.ItemRole.FieldRole, self.lineEdit_setVinId)
 
         self.lineEdit_getVinId = QLineEdit(self.groupBox_6)
         self.lineEdit_getVinId.setObjectName(u"lineEdit_getVinId")
@@ -162,7 +162,7 @@ class Ui_configWidget_autoGen_T(object):
         self.lineEdit_getVinId.setMaxLength(32767)
         self.lineEdit_getVinId.setReadOnly(True)
 
-        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.lineEdit_getVinId)
+        self.formLayout.setWidget(0, QFormLayout.ItemRole.FieldRole, self.lineEdit_getVinId)
 
 
         self.horizontalLayout.addWidget(self.groupBox_6)

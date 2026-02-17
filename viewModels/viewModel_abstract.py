@@ -11,9 +11,9 @@ class viewModel_abstract_T(QObject):  # Inherit from QObject
         self.__log = Logger_T()
         self.__log.log(message="Initializing [ViewModelAbstract_T]", level=logging.INFO)
         self.model = model_T()
-        self.modleThread = QThread()
-        self.model.moveToThread(self.modleThread)
-        self.modleThread.start()
+        self.modelThread = QThread()
+        self.model.moveToThread(self.modelThread)
+        self.modelThread.start()
 
         self.buttonClicked.connect(self.model.task_buttonClicked)
         self.model.taskResult.connect(self.on_task_result)
@@ -21,5 +21,12 @@ class viewModel_abstract_T(QObject):  # Inherit from QObject
     @Slot(str)
     def on_task_result(self, result):
         self.taskResult.emit(result)
+
+    def cleanup(self):
+        """Safely stop the model thread."""
+        self.__log.log(message="Cleaning up [ViewModelAbstract_T]", level=logging.INFO)
+        if hasattr(self, 'modelThread') and self.modelThread.isRunning():
+            self.modelThread.quit()
+            self.modelThread.wait()
 
 

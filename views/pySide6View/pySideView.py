@@ -13,13 +13,14 @@ class viewPySide_T(view_abstract_T):
         super().__init__()
         self.__log = Logger_T()
         self.__log.log(message="Initializing [viewPySide]", level=logging.INFO)
+        self.mainWindow = None
 
     def createWidgets(self):
-        self.mainWindow = mainWindow_T()
-        self.mainWindow.show()
+        self.mainWindow = mainWindow_T(viewModel=self.viewModel)
 
     @override
     def run(self):
         self.__log.log(message="Running [viewPySide_T]", level=logging.INFO)
-        self.createWidgets()
+        if not self.mainWindow:
+            self.createWidgets()
         self.mainWindow.show()

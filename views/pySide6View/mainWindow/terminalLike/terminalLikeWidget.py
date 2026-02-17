@@ -64,6 +64,14 @@ class TerminalWidget_T(Ui_terminalLike_autoGen_T, QWidget):
         output = self.process.readAllStandardOutput().data().decode("utf-8")
         self.plainTextEdit_output.appendPlainText(output.strip())
 
+    def closeEvent(self, event):
+        """Ensure the process is terminated when the widget is closed."""
+        if self.process.state() != QProcess.ProcessState.NotRunning:
+            self.process.terminate()
+            if not self.process.waitForFinished(1000):
+                self.process.kill()
+        super().closeEvent(event)
+
 
 if __name__ == "__main__":
     app = QApplication([])
